@@ -26,6 +26,14 @@ body {
 }
 
 .main {
-  height: 100vh;
+  height: 200vh;
   background: #e8e8e8;
+}
+
+html.lock {
+  overflow: hidden;
+}
+
+.burger-menu {
+  display: none;
 }

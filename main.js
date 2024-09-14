@@ -19,3 +19,21 @@ $(function() {
     }
 })
 
+//burger
+$(function() {
+    $('#mobile-burger, .burger-menu__close').click(function (event) {
+        $(this).toggleClass('is-active')
+        $('.header-burger, .burger-menu').toggleClass('active');
+        $('html').toggleClass('lock')
+    });
+    $('.burger-menu__shadow').click(function (event) {
+        $('.burger-menu').removeClass('active');
+        $('html').removeClass('lock');
+        $('.header-burger').removeClass('active');
+    });
+
+    $('.burger-menu__menu_trigger').on('click', function() {
+        $('.burger-menu__menu_trigger').parent().toggleClass('is-active')
+        $('.burger-menu__menu_sub').slideToggle(100)
+    })
+})
