@@ -85,7 +85,7 @@
             <a href="tel:88005001495" class="header__phone">
                8-800-500-1-495
             </a>
-            <a href="" class="header__feedback">
+            <a href="javascript:;" data-src="#back_call" class="header__feedback">
                Заказать звонок
             </a>
          </div>
@@ -93,7 +93,49 @@
    </div>
    <div class="header__bottom">
       <div class="container">
-
+         <a href="/" class="header__logo">
+            <img src="/public/logo.svg" alt="">
+         </a>
+         <div class="header__catalog">
+            <div class="header__catalog_trigger" id="show-catalog">
+               <svg class="basket" xmlns="http://www.w3.org/2000/svg" width="21" height="15" viewBox="0 0 21 15" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H20V2H0V0ZM0 6H8V8H0V6ZM8 12H0V14H10L8 12ZM15 12C16.6569 12 18 10.6569 18 9C18 7.34315 16.6569 6 15 6C13.3431 6 12 7.34315 12 9C12 10.6569 13.3431 12 15 12ZM19.1716 11.7574C19.6951 10.9669 20 10.0191 20 9C20 6.23858 17.7614 4 15 4C12.2386 4 10 6.23858 10 9C10 11.7614 12.2386 14 15 14C16.0191 14 16.967 13.6951 17.7574 13.1716L19.1213 14.5355L20.5355 13.1213L19.1716 11.7574Z" fill="white"></path>
+               </svg>
+               <svg class="cross hide" id="Layer_3" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" data-name="Layer 3"><path d="m17.414 16 6.293-6.293a1 1 0 0 0 -1.414-1.414l-6.293 6.293-6.293-6.293a1 1 0 0 0 -1.414 1.414l6.293 6.293-6.293 6.293a1 1 0 1 0 1.414 1.414l6.293-6.293 6.293 6.293a1 1 0 0 0 1.414-1.414z" fill="#000000" style="fill: rgb(255, 255, 255);"></path></svg>
+               Каталог
+            </div>
+         </div>
+         <form class="header__search main_search_block" action="/catalog/" id="title-search">
+            <input type="hidden" name="human" value="no_bot">
+            <div class="main_search_block_in">
+               <input type="text" placeholder="Поиск оборудования и запчастей по артикулу" name="q" value="" data-entity="search-input">
+               <span class="clear"></span>
+               <button value="submit"></button>
+            </div>
+            <div class="main_search_block_in_result" data-entity="search-result">
+            </div>
+         </form>
+         <div class="header__links">
+            <a href="#" class="header_link_lk">
+               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
+                  <path d="M13.9997 5.50021C13.9997 7.9856 11.9849 10.0004 9.49947 10.0004C7.01408 10.0004 4.99927 7.9856 4.99927 5.50021C4.99927 3.01481 7.01408 1 9.49947 1C11.9849 1 13.9997 3.01481 13.9997 5.50021Z" stroke="#50575B" stroke-width="2"></path>
+                  <path d="M19.0007 18.0002C16.995 14.973 13.7111 13 10.0003 13C6.28953 13 3.00566 14.973 1 18.0002" stroke="#50575B" stroke-width="2" stroke-linecap="round"></path>
+               </svg>
+               Кабинет
+            </a>
+            <div class="links_for_in2" onclick="location.href='/favorite/';">
+               <span class="favorite-count--js">0</span>
+               <a href="/favorite/">Избранное</a>
+            </div>
+            <div class="links_for_in3" >
+               <span class="compare-count--js" onclick="location.href='/catalog/compare/';">0</span>
+               <a href="/catalog/compare/">Сравнение</a>
+            </div>
+            <div class="links_for_in4" onclick="location.href='/personal/cart/';">
+               <span class="basket-count--js">0</span>
+               <a href="/personal/cart/">Корзина</a>
+            </div>
+         </div>
       </div>
    </div>
 </header>

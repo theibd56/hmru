@@ -15,9 +15,13 @@
     }
   }
   &__bottom {
-
+    padding: 23px 0 32px;
+    .container {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
   }
-
 
   &__nav {
     display: flex;
@@ -224,4 +228,205 @@
       color: #2086CF;
     }
   }
+
+  &__logo {
+    width: 135px;
+    height: 58px;
+
+    display: block;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__catalog {
+    &_trigger {
+      width: 147px;
+      height: 50px;
+      column-gap: 12px;
+      color: #FFF;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      justify-content: center;
+      padding: 0;
+      margin-left: 118px;
+      border-radius: 60px;
+      background: #2086cf;
+      display: flex;
+      align-items: center;
+      border: none;
+      transition: 0.3s;
+
+      cursor: pointer;
+      * {
+        cursor: pointer;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  &__search.main_search_block {
+    margin-left: -362px;
+    max-width: 786px;
+
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    width: 100%;
+    padding: 0 25px;
+    background: #fff;
+    z-index: 98;
+    .main_search_block_in {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      border-bottom: 2px solid #D5D5D5;
+      padding: 25px 0 4px 0;
+      input {
+        display: block;
+        width: 100%;
+        border: none;
+        outline: none;
+        color: #50575B;
+        font-size: 18px;
+        font-weight: 400;
+        padding: 0 10px 0 0;
+      }
+      button {
+        display: inline-block;
+        border: none;
+        width: 16px;
+        height: 16px;
+        background: url(/public/search_ic.svg) 0 0 no-repeat;
+        flex-shrink: 0;
+      }
+      .clear {
+        width: 13px;
+        height: 12px;
+        display: none;
+        background: url(/public/clear_ic.svg) 0 0 no-repeat;
+        flex-shrink: 0;
+        margin: 0 10px 0 0;
+        cursor: pointer;
+      }
+    }
+    .main_search_block_in_result {
+      display: none;
+      width: 100%;
+      background: #fff;
+      padding: 25px 0 70px 0;
+    }
+    &:hover {
+      box-shadow: 0px 40px 70px rgba(0, 0, 0, 0.2);
+      border-radius: 25px;
+      .main_search_block_in_result {
+        display: block;
+      }
+    }
+  }
+  &__links {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    div {
+      height: 40px;
+      margin: 0 0 0 10px;
+      position: relative;
+      cursor: pointer;
+      padding: 22px 0 0 0;
+      a {
+        color: #858A8D;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: none;
+        padding: 0 5px;
+      }
+      span {
+        display: inline-block;
+        position: absolute;
+        top: -15px;
+        right: 0;
+        background: #2086CF;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 400;
+        padding: 0 5px;
+        border-radius: 50px;
+      }
+    }
+    .header_link_lk {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 5px;
+      color: #858A8D;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration: none;
+
+      transition: all .2s;
+
+      cursor: pointer;
+      svg, path {
+        transition: all .2s;
+      }
+      &:hover {
+        color: #2086CF;
+        svg path {
+          stroke: #2086CF;
+        }
+      }
+    }
+    .links_for_in2 {
+      background: url(/public/links_for_in2.svg) center 0px no-repeat;
+      transition: all .2s;
+      a {
+        transition: all .2s;
+      }
+      &:hover {
+        background: url(/public/links_for_in2_1.svg) center 0px no-repeat;
+        a {
+          color: #2086CF;
+        }
+      }
+    }
+    .links_for_in3 {
+      background: url(/public/links_for_in3.svg) center 0px no-repeat;
+      transition: all .2s;
+      a {
+        transition: all .2s;
+      }
+      &:hover {
+        background: url(/public/links_for_in3_1.svg) center 0px no-repeat;
+        a {
+          color: #2086CF;
+        }
+      }
+    }
+    .links_for_in4 {
+      background: url(/public/links_for_in4.svg) center 0px no-repeat;
+      transition: all .2s;
+      a {
+        transition: all .2s;
+      }
+      &:hover {
+        background: url(/public/links_for_in4_1.svg) center 0px no-repeat;
+        a {
+          color: #2086CF;
+        }
+      }
+    }
+  }
+}
+
+.hide {
+  display: none !important;
 }
