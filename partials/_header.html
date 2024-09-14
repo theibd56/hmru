@@ -93,6 +93,24 @@
    </div>
    <div class="header__bottom">
       <div class="container">
+         <div class="header__burger">
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect width="20" height="2" fill="#50575B" />
+               <rect y="6" width="20" height="2" fill="#50575B" />
+               <rect y="12" width="20" height="2" fill="#50575B" />
+            </svg>
+         </div>
+         <div class="header__notification_count">
+            <div class="header__notification_ico">
+               <svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.1 21C8.65737 21.0007 9.20111 20.8277 9.65564 20.5051C10.1102 20.1826 10.4529 19.7264 10.6362 19.2H5.5638C5.7471 19.7264 6.08983 20.1826 6.54436 20.5051C6.99889 20.8277 7.54263 21.0007 8.1 21ZM14.4 14.3274V10.2C14.4 7.3047 12.4335 4.8657 9.7695 4.1322C9.5058 3.468 8.8614 3 8.1 3C7.3386 3 6.6942 3.468 6.4305 4.1322C3.7665 4.8666 1.8 7.3047 1.8 10.2V14.3274L0.263701 15.8637C0.179963 15.9471 0.113554 16.0463 0.0682968 16.1555C0.0230401 16.2647 -0.000170504 16.3818 9.42906e-07 16.5V17.4C9.42906e-07 17.6387 0.0948221 17.8676 0.263605 18.0364C0.432388 18.2052 0.661306 18.3 0.900001 18.3H15.3C15.5387 18.3 15.7676 18.2052 15.9364 18.0364C16.1052 17.8676 16.2 17.6387 16.2 17.4V16.5C16.2002 16.3818 16.177 16.2647 16.1317 16.1555C16.0864 16.0463 16.02 15.9471 15.9363 15.8637L14.4 14.3274Z" fill="#2086CF"></path>
+                  <circle cx="14" cy="5" r="4" fill="#F23131" stroke="white" stroke-width="2"></circle>
+               </svg>
+            </div>
+            <div class="header__notification_text">
+               3
+            </div>
+         </div>
          <a href="/" class="header__logo">
             <img src="/public/logo.svg" alt="">
          </a>
@@ -102,7 +120,7 @@
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H20V2H0V0ZM0 6H8V8H0V6ZM8 12H0V14H10L8 12ZM15 12C16.6569 12 18 10.6569 18 9C18 7.34315 16.6569 6 15 6C13.3431 6 12 7.34315 12 9C12 10.6569 13.3431 12 15 12ZM19.1716 11.7574C19.6951 10.9669 20 10.0191 20 9C20 6.23858 17.7614 4 15 4C12.2386 4 10 6.23858 10 9C10 11.7614 12.2386 14 15 14C16.0191 14 16.967 13.6951 17.7574 13.1716L19.1213 14.5355L20.5355 13.1213L19.1716 11.7574Z" fill="white"></path>
                </svg>
                <svg class="cross hide" id="Layer_3" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" data-name="Layer 3"><path d="m17.414 16 6.293-6.293a1 1 0 0 0 -1.414-1.414l-6.293 6.293-6.293-6.293a1 1 0 0 0 -1.414 1.414l6.293 6.293-6.293 6.293a1 1 0 1 0 1.414 1.414l6.293-6.293 6.293 6.293a1 1 0 0 0 1.414-1.414z" fill="#000000" style="fill: rgb(255, 255, 255);"></path></svg>
-               Каталог
+               <span>Каталог</span>
             </div>
          </div>
          <form class="header__search main_search_block" action="/catalog/" id="title-search">
@@ -115,6 +133,11 @@
             <div class="main_search_block_in_result" data-entity="search-result">
             </div>
          </form>
+         <div class="header__search_trigger">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4732 16.8876C13.8414 18.2087 11.7631 19 9.5 19C4.2533 19 0 14.7467 0 9.5C0 4.2533 4.2533 0 9.5 0C14.7467 0 19 4.2533 19 9.5C19 11.7632 18.2086 13.8415 16.8875 15.4734L19.9496 18.5355L18.5354 19.9497L15.4732 16.8876ZM17 9.5C17 13.6421 13.6422 17 9.5 17C5.35786 17 2 13.6421 2 9.5C2 5.35786 5.35786 2 9.5 2C13.6422 2 17 5.35786 17 9.5Z" fill="#50575B" />
+            </svg>
+         </div>
          <div class="header__links">
             <a href="#" class="header_link_lk">
                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">

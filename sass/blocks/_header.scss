@@ -21,6 +21,9 @@
       align-items: center;
       position: relative;
     }
+    .header__burger, .header__notification_count {
+      display: none;
+    }
   }
 
   &__nav {
@@ -67,7 +70,6 @@
         padding: 15px 15px;
 
         flex-direction: column;
-        gap: 15px;
         a {
           font-size: 14px;
           display: block;
@@ -425,6 +427,10 @@
       }
     }
   }
+}
+
+.header__search_trigger {
+  display: none;
 }
 
 .hide {
