@@ -278,26 +278,6 @@
         width: 25px;
       }
     }
-
-
-    .jalousie {
-      position: absolute;
-      top: 152%;
-      left: calc(50% - 50vw);
-      background: #6691B9;
-      width: 100vw;
-      height: 0;
-      opacity: 0;
-      z-index: 999;
-      transition: all 0.3s ease;
-    }
-    .jalousie.active {
-      height: 100vh !important;
-      opacity: 0.7 !important;
-    }
-
-
-
   }
   &__search.main_search_block {
     margin-left: -362px;
@@ -488,4 +468,22 @@
 
 .hide {
   display: none !important;
+}
+
+.jalousie {
+  position: absolute;
+
+
+  background: #6691B9;
+  width: 100vw;
+  left: -200%;
+  height: 0;
+  opacity: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+.jalousie.active {
+  height: 200vh !important;
+  opacity: 0.7 !important;
+  left: 0;
 }
