@@ -1,0 +1,26 @@
+@import url('https://fonts.cdnfonts.com/css/pt-root-ui');
+
+@import 'blocks';
+@import 'media';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  cursor: default;
+  font-family: 'PT Root UI', sans-serif;
+}
+
+body {
+  font-family: 'PT Root UI', sans-serif;
+  background: #fff;
+  font-style: normal;
+  font-weight: normal;
+
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
