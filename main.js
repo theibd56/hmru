@@ -1,35 +1,64 @@
 import { Fancybox } from "@fancyapps/ui";
+import Swiper from 'swiper/bundle';
+
 
 import './sass/_style.scss';
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import 'swiper/css/bundle';
 
-// //toggle search
-// $(function() {
-//     if (window.innerWidth < 992) {
-//         $('.header__search_trigger').on('click', () => {
-//             console.log('gay')
-//             $('#title-search').slideToggle(100)
-//         })
-//
-//         $(document).mouseup(function (e) {
-//             if ($('#title-search').has(e.target).length === 0){
-//                 $('#title-search').slideUp(10);
-//             }
-//         });
-//     }
-// })
+//slider
+
+const popularSlider = new Swiper('.catalog-popular__container', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+    breakpoints: {
+        300: {
+            slidesPerView: 2.25,
+        },
+        576: {
+            slidesPerView: 3,
+        },
+        992: {
+            slidesPerView: 4,
+        },
+    },
+})
+
+// //toggle catalog
+$(function() {
+    $('#show-catalog').on('click', () => {
+        // $('.menu-box').toggleClass('active')
+        // $('.jalousie').toggleClass('active')
+    })
+})
+
+$(document).on('click', '#show-catalog', function () {
+    $(this).toggleClass('is_active')
+    $('.basket').toggleClass('hide')
+    $('.cross').toggleClass('hide')
+    $('.burger-menu').removeClass('active');
+    $('.header__burger').removeClass('is-active');
+    $('.catalog-menu').toggleClass('active')
+
+    if ($('.basket').hasClass('hide')) {
+        $('body').addClass('locked')
+    } else if ($('.cross').hasClass('hide')) {
+        $('body').removeClass('locked')
+    }
+})
+
+$(document).on('click', '.catalog-menu__arrow', function () {
+    $(this).parent().parent().toggleClass('opened')
+    $(this).parent().siblings('.catalog-sub-menu').slideToggle()
+})
 
 //burger
 $(function() {
     $('#mobile-burger, .burger-menu__close').click(function (event) {
         $(this).toggleClass('is-active')
-        $('.header-burger, .burger-menu').toggleClass('active');
+        $('.burger-menu').toggleClass('active');
         $('html').toggleClass('lock')
-    });
-    $('.burger-menu__shadow').click(function (event) {
-        $('.burger-menu').removeClass('active');
-        $('html').removeClass('lock');
-        $('.header-burger').removeClass('active');
     });
 
     $('.burger-menu__menu_trigger').on('click', function() {
