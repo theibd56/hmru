@@ -35,6 +35,13 @@
     border-right: none;
     padding: 30px;
   }
+  .catalog-menu__list_item.active {
+    background: #fff;
+    a {
+      color: #50575b;
+    }
+  }
+
   .catalog-menu__list > li.opened {
     border: 0;
   }
