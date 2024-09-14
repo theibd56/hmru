@@ -325,7 +325,31 @@
       display: none;
       width: 100%;
       background: #fff;
-      padding: 25px 0 70px 0;
+      padding: 25px 0 40px 0;
+    }
+    .main_search_block_in_result .link_section {
+      font-weight: 500;
+      font-size: 18px;
+      margin: 0 0 10px 0;
+      padding: 0 0;
+    }
+    .main_search_block_in_result a {
+      display: block;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 15px;
+      color: #50575B;
+      margin: 0 0 10px 0;
+      padding: 0 0;
+    }
+    .link-photo {
+      display: none;
+    }
+    .link-text {
+      flex: 0 0 calc(100% - 66px);
+    }
+    .close {
+      display: none;
     }
     &:hover {
       box-shadow: 0px 40px 70px rgba(0, 0, 0, 0.2);

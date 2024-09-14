@@ -57,13 +57,13 @@
 
       margin: 0 auto;
     }
-    .header__search.main_search_block {
-      display: none;
-
-      max-width: 100%;
-      top: 40px;
-      padding: 10px 25px;
-    }
+    //.header__search.main_search_block {
+    //  display: none;
+    //
+    //  max-width: 100%;
+    //  top: 40px;
+    //  padding: 10px 25px;
+    //}
     .header__search_trigger {
       display: block;
       cursor: pointer;
@@ -71,10 +71,100 @@
         cursor: pointer;
       }
     }
-
     .container {
       gap: 20px;
+    }
 
+
+    .header__search.main_search_block {
+      max-width: 100%;
+      padding: 5px 25px;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+    #search-popup {
+      display: block;
+      position: fixed;
+      opacity: 0;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #fff;
+      z-index: 1000;
+      padding: 0 15px;
+      transition: all 0.3s ease;
+    }
+    #search-popup.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .main_search_block_in {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      border-bottom: 1px solid #e7e7e7;
+      padding: 20px 0;
+    }
+    .main_search_block_in input {
+      display: block;
+      width: 100%;
+      border: none;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      padding: 0 10px 0 0;
+      text-overflow: ellipsis;
+      color: #50575b;
+      outline: 0;
+    }
+    .main_search_block_in button {
+      display: block;
+      border: none;
+      width: 16px;
+      height: 16px;
+      background: url(/public/search_ic.svg) 0 0 no-repeat;
+      flex-shrink: 0;
+    }
+    .main_search_block_in .close {
+      display: flex;
+      width: 16px;
+      height: 16px;
+      margin-left: 15px;
+    }
+    .main_search_block_in_result {
+      display: none;
+      background: #fff;
+      padding: 10px 0;
+      margin: 0 5px;
+    }
+    .main_search_block_in_result .link_section {
+      display: none;
+      border-bottom: unset;
+    }
+    .main_search_block_in_result a {
+      display: flex;
+      padding: 10px 0;
+      align-items: center;
+      -moz-column-gap: 16px;
+      column-gap: 16px;
+      color: #50575b;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration: unset;
+      border-bottom: 1px solid #e7e7e7;
+    }
+    .link-photo {
+      flex: 0 0 50px;
+      height: 50px;
+    }
+    .link-text {
+      flex: 0 0 calc(100% - 66px);
     }
   }
 

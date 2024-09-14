@@ -119,16 +119,50 @@
                <span>Каталог</span>
             </div>
          </div>
-         <form class="header__search main_search_block" action="/catalog/" id="title-search">
-            <input type="hidden" name="human" value="no_bot">
-            <div class="main_search_block_in">
-               <input type="text" placeholder="Поиск оборудования и запчастей по артикулу" name="q" value="" data-entity="search-input">
-               <span class="clear"></span>
-               <button value="submit"></button>
-            </div>
-            <div class="main_search_block_in_result" data-entity="search-result">
-            </div>
-         </form>
+         <div class="" id="search-popup">
+            <form class="header__search main_search_block" action="/catalog/" id="title-search">
+               <input type="hidden" name="human" value="no_bot">
+               <div class="main_search_block_in">
+                  <input type="text" placeholder="Поиск оборудования и запчастей по артикулу" name="q" value="" data-entity="search-input">
+                  <span class="clear"></span>
+                  <button value="submit"></button>
+                  <div class="close">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <rect x="6.10352e-05" y="14.1421" width="20" height="2" transform="rotate(-45 6.10352e-05 14.1421)" fill="#50575B"></rect>
+                        <rect x="1.41418" width="20" height="2" transform="rotate(45 1.41418 0)" fill="#50575B"></rect>
+                     </svg>
+                  </div>
+               </div>
+               <div class="main_search_block_in_result" data-entity="search-result">
+                  <div class="main_search_block_in_result_in">
+                     <a href="/catalog/pishchevoe_oborudovanie/oborudovanie_dlya_pererabotki_ovoshchey/kartofelechistki/" class="link_section">
+                        <div class="link_section">Картофелечистки</div>
+                     </a>
+                     <a href="/catalog/pishchevoe_oborudovanie/oborudovanie_dlya_pererabotki_ovoshchey/kartofelechistki/kartofelechistka_pp15/">
+                        <div class="link-photo">
+                           <img src="/public/search1.png" alt="">
+                        </div>
+                        <div class="link-text">
+                           <b>Автомат</b>ическая горизонтальная упаковочная машина
+                           DXDZ-250D
+                        </div>
+                     </a>
+                     <a href="/catalog/pishchevoe_oborudovanie/oborudovanie_dlya_pererabotki_ovoshchey/kartofelechistki/kartofelechistka_pp15/">
+                        <div class="link-photo">
+                           <img src="/public/search2.png" alt="">
+                        </div>
+                        <div><b>Автомат</b>ическая упаковочная DXDZ-250D</div>
+                     </a>
+                     <a href="/catalog/pishchevoe_oborudovanie/oborudovanie_dlya_pererabotki_ovoshchey/kartofelechistki/kartofelechistka_pp15/">
+                        <div class="link-photo">
+                           <img src="/public/search3.png" alt="">
+                        </div>
+                        <div><b>Автомат</b>ическая горизонтальная упаковочная DXDZ</div>
+                     </a>
+                  </div>
+               </div>
+            </form>
+         </div>
          <div class="header__search_trigger">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4732 16.8876C13.8414 18.2087 11.7631 19 9.5 19C4.2533 19 0 14.7467 0 9.5C0 4.2533 4.2533 0 9.5 0C14.7467 0 19 4.2533 19 9.5C19 11.7632 18.2086 13.8415 16.8875 15.4734L19.9496 18.5355L18.5354 19.9497L15.4732 16.8876ZM17 9.5C17 13.6421 13.6422 17 9.5 17C5.35786 17 2 13.6421 2 9.5C2 5.35786 5.35786 2 9.5 2C13.6422 2 17 5.35786 17 9.5Z" fill="#50575B" />

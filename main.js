@@ -3,21 +3,21 @@ import { Fancybox } from "@fancyapps/ui";
 import './sass/_style.scss';
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
-//toggle search
-$(function() {
-    if (window.innerWidth < 992) {
-        $('.header__search_trigger').on('click', () => {
-            console.log('gay')
-            $('#title-search').slideToggle(100)
-        })
-
-        $(document).mouseup(function (e) {
-            if ($('#title-search').has(e.target).length === 0){
-                $('#title-search').slideUp(10);
-            }
-        });
-    }
-})
+// //toggle search
+// $(function() {
+//     if (window.innerWidth < 992) {
+//         $('.header__search_trigger').on('click', () => {
+//             console.log('gay')
+//             $('#title-search').slideToggle(100)
+//         })
+//
+//         $(document).mouseup(function (e) {
+//             if ($('#title-search').has(e.target).length === 0){
+//                 $('#title-search').slideUp(10);
+//             }
+//         });
+//     }
+// })
 
 //burger
 $(function() {
@@ -37,3 +37,20 @@ $(function() {
         $('.burger-menu__menu_sub').slideToggle(100)
     })
 })
+
+//search bar
+$(document).on(
+    'click',
+    '.header__search_trigger, .main_search_block_in .close',
+    function () {
+        $('#search-popup').toggleClass('show')
+        $('.header__burger ').removeClass('is-active')
+        $('.burger-menu').removeClass('active')
+
+        if ($('#search-popup').hasClass('show')) {
+            $('body').addClass('lock')
+        } else {
+            $('body').removeClass('lock')
+        }
+    },
+)
