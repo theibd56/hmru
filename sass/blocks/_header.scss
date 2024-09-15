@@ -55,7 +55,7 @@
         display: inline-block;
         font-size: 15px;
         color: #929ea6;
-        background: url(/public/loc_arrow.svg) right 7px no-repeat;
+        background: url(/loc_arrow.svg) right 7px no-repeat;
         padding: 0 12px 0 0;
 
         cursor: pointer;
@@ -311,14 +311,14 @@
         border: none;
         width: 16px;
         height: 16px;
-        background: url(/public/search_ic.svg) 0 0 no-repeat;
+        background: url(/search_ic.svg) 0 0 no-repeat;
         flex-shrink: 0;
       }
       .clear {
         width: 13px;
         height: 12px;
         display: none;
-        background: url(/public/clear_ic.svg) 0 0 no-repeat;
+        background: url(/clear_ic.svg) 0 0 no-repeat;
         flex-shrink: 0;
         margin: 0 10px 0 0;
         cursor: pointer;
@@ -421,39 +421,39 @@
       }
     }
     .links_for_in2 {
-      background: url(/public/links_for_in2.svg) center 0px no-repeat;
+      background: url(/links_for_in2.svg) center 0px no-repeat;
       transition: all .2s;
       a {
         transition: all .2s;
       }
       &:hover {
-        background: url(/public/links_for_in2_1.svg) center 0px no-repeat;
+        background: url(/links_for_in2_1.svg) center 0px no-repeat;
         a {
           color: #2086CF;
         }
       }
     }
     .links_for_in3 {
-      background: url(/public/links_for_in3.svg) center 0px no-repeat;
+      background: url(/links_for_in3.svg) center 0px no-repeat;
       transition: all .2s;
       a {
         transition: all .2s;
       }
       &:hover {
-        background: url(/public/links_for_in3_1.svg) center 0px no-repeat;
+        background: url(/links_for_in3_1.svg) center 0px no-repeat;
         a {
           color: #2086CF;
         }
       }
     }
     .links_for_in4 {
-      background: url(/public/links_for_in4.svg) center 0px no-repeat;
+      background: url(/links_for_in4.svg) center 0px no-repeat;
       transition: all .2s;
       a {
         transition: all .2s;
       }
       &:hover {
-        background: url(/public/links_for_in4_1.svg) center 0px no-repeat;
+        background: url(/links_for_in4_1.svg) center 0px no-repeat;
         a {
           color: #2086CF;
         }

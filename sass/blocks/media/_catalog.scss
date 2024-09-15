@@ -1,4 +1,4 @@
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
   .catalog-menu {
     display: block;
     position: fixed;
@@ -145,5 +145,11 @@
 
   .catalog-menu__inner {
     display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .catalog-menu__list {
+    padding: 10px;
   }
 }

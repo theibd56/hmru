@@ -1,4 +1,4 @@
-@media (max-width: 1630px) {
+@media screen and (max-width: 1630px) {
   .header__catalog_trigger {
     margin-left: 60px;
   }
@@ -8,7 +8,7 @@
   }
 }
 
-@media (max-width: 1250px) {
+@media screen and (max-width: 1250px) {
   .header__links {
     position: fixed;
     left: 0;
@@ -31,7 +31,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
   .header__top {
     display: none;
   }
@@ -126,7 +126,7 @@
       border: none;
       width: 16px;
       height: 16px;
-      background: url(/public/search_ic.svg) 0 0 no-repeat;
+      background: url(/search_ic.svg) 0 0 no-repeat;
       flex-shrink: 0;
     }
     .main_search_block_in .close {
@@ -172,7 +172,7 @@
 
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .header__links {
     gap: 20px;
     .header_link_lk {

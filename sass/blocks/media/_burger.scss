@@ -1,4 +1,4 @@
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
   .header__burger {
     display: block !important;
     width: 35px;
@@ -208,7 +208,7 @@
   }
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .burger-menu__contacts_left {
     gap: 8px;
   }

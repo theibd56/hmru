@@ -28,8 +28,11 @@ const popularSlider = new Swiper('.catalog-popular__container', {
 // //toggle catalog
 $(function() {
     $('#show-catalog').on('click', () => {
-        // $('.menu-box').toggleClass('active')
-        $('.jalousie').toggleClass('active')
+        if (window.innerWidth > 992) {
+            $('.jalousie').toggleClass('active')
+        } else {
+            $('.jalousie').removeClass('active')
+        }
     })
 })
 
@@ -48,27 +51,11 @@ $(document).on('click', '#show-catalog', function () {
     }
 })
 
-function catalogTriggerMobile() {
-    $(this).parent().toggleClass('opened')
-    $('.jalousie').toggleClass('active')
-    $(this).siblings('.catalog-sub-menu').slideToggle()
-}
-
-function catalogTriggerDesctop() {
-    $('.catalog-menu__list_item').removeClass('active');
-    $('.catalog-menu__inner_item').removeClass('active');
-    $(this).addClass('active');
-    $(`.catalog-menu__inner_item[data-tab="${this.dataset.tab}"]`).addClass('active');
-}
-
-
-
 $('.catalog-menu__list_item:first-child').addClass('active')
 $('.catalog-menu__inner_item:first-child').addClass('active')
 $(document).on('click', '.catalog-menu__list_item', function () {
     if (window.innerWidth < 992) {
         $(this).toggleClass('opened')
-        $('.jalousie').toggleClass('active')
         $(this).find('.catalog-sub-menu').slideToggle()
     } else {
         $('.catalog-menu__list_item').removeClass('active');
