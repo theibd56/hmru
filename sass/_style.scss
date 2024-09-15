@@ -12,10 +12,10 @@
 
 body {
   font-family: 'PT Root UI', sans-serif;
-  background: #fff;
+  //background: #fff;
   font-style: normal;
   font-weight: normal;
-
+  background: #e8e8e8;
   overflow-x: hidden;
 }
 
@@ -26,8 +26,8 @@ body {
 }
 
 .main {
-  height: 200vh;
-  background: #e8e8e8;
+  height: 100vh;
+
 }
 
 .lock {

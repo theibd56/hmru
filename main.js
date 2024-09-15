@@ -76,12 +76,7 @@ $(document).on('click', '.catalog-menu__list_item', function () {
         $(this).addClass('active');
         $(`.catalog-menu__inner_item[data-tab="${this.dataset.tab}"]`).addClass('active');
     }
-
 })
-
-
-
-
 
 //burger
 $(function() {
@@ -113,3 +108,16 @@ $(document).on(
         }
     },
 )
+
+//footer submenu
+$(function() {
+    $('.footer__catalog_trigger').on('click', function() {
+      $(this).toggleClass('active')
+      $('.footer__catalog_sub').slideToggle(50)
+    })
+
+    $('.footer__menu_trigger').on('click', function() {
+        $(this).toggleClass('active')
+        $('.footer__menu_sub').slideToggle(50)
+    })
+})
