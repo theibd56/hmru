@@ -1,0 +1,347 @@
+.kroshki {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 0 30px 0;
+  width: auto;
+  a {
+    font-size: 14px;
+    color: #999;
+    text-decoration: none;
+  }
+  span {
+    display: inline-block;
+    margin: 0 8px;
+    font-size: 14px;
+    color: #999;
+  }
+}
+
+.block_heading_with_link {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin: 0 0 25px 0;
+  max-width: 1030px;
+  h1 {
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0 20px 0 0;
+    line-height: 1.1em;
+  }
+}
+
+.catalog_flex_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 0 0 40px 0;
+}
+
+.catalog_flex_main_left {
+  max-width: 320px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.catalog_flex_main_right {
+  width: 100%;
+}
+
+.catalog_flex_main_right_flex {
+  width: 100%;
+  display: grid;
+  grid-template: minmax(230px, auto) / repeat(4, 1fr);
+  gap: 20px;
+}
+
+.catalog_flex_main_right_flex_in {
+  border: 1px solid #E7E7E7;
+  border-radius: 15px;
+  position: relative;
+  padding: 15px 10px;
+  transition: all .2s;
+  cursor: pointer;
+  img {
+    display: block;
+    width: auto;
+    height: 140px;
+    margin: 0 auto;
+  }
+  p {
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    font-size: 19px;
+    text-align: center;
+    margin: 15px 0 0 0;
+    color: #303239;
+  }
+  * {
+    cursor: pointer;
+  }
+  &:hover {
+    box-shadow: 0px 20px 100px rgba(0, 0, 0, 0.1);
+    border-color: #fff;
+  }
+}
+
+.catalog_flex_main_left_in {
+  width: 100%;
+  padding: 15px 10px 5px 10px;
+  background: #F7F8FA;
+  border-radius: 15px;
+}
+
+.side-menu__root {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 15px 15px 15px 15px;
+  margin: 0 0 15px 0;
+  text-decoration: none;
+  border-bottom: 1px solid #E7E7E7;
+  color: #50575B;
+}
+
+.filrt_form_in {
+  border-bottom: 1px solid #E7E7E7;
+  padding: 0 0 10px 0;
+  margin: 0 0 10px 0;
+}
+
+.filrt_form_in_head {
+  padding: 4px 15px 4px 15px;
+  margin: 0 0 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0 0 0 0;
+    overflow-wrap: anywhere;
+    color: #303239;
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  i {
+    display: inline-block;
+    background: url(/arrow_select.svg) right 0px no-repeat;
+    background-size: 10px;
+    width: 22px;
+    height: 6px;
+    flex-shrink: 0;
+    transition: all .2s;
+  }
+  * {
+    cursor: pointer;
+  }
+}
+
+.filrt_form_in_body {
+  padding: 0 15px;
+  display: none;
+}
+
+.filrt_form_in_body_in {
+  margin: 0 0 4px 0;
+  max-height: 190px;
+  overflow: hidden;
+  &:hover {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    -ms-overflow-scrolling: touch;
+    -o-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+  }
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 3px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #E7E7E7;
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.catalog_flex_main_left_in .filrt_form_in_body_in {
+  max-height: 300px;
+}
+
+.filrt_form_in_body_in>a {
+  display: block;
+  color: #50575B;
+  text-decoration: none;
+  padding: 4px 15px;
+  margin: 4px 0;
+  cursor: pointer;
+  &:hover {
+    color: #2086CF;
+    font-weight: 500;
+  }
+}
+
+.form_call_us {
+  margin: 0 0 60px 0;
+}
+
+.form_call_us_flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form_call_us_flex_in {
+  width: 49%;
+  background: #F7F8FA;
+  border-radius: 15px;
+  padding: 70px 70px;
+  position: relative;
+  .form_call_us_header {
+    font-size: 29px;
+    margin: 0 0 5px 0;
+    line-height: 1.1em;
+    font-weight: bold;
+    display: block;
+  }
+  .form_call_us_subtitle {
+    font-size: 18px;
+    margin: 0 0 30px 0;
+    font-weight: 400;
+    display: block;
+  }
+  button {
+    width: 150px;
+    border-radius: 40px;
+    background: #F7F8FA;
+    border: 1px solid #E6E6E6;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: #50575B;
+
+    transition: background .3s ease;
+    cursor: pointer;
+  }
+}
+
+.form_call_us_flex_in .ajax-form__submit--js:hover {
+  background: #E5E5E5;
+}
+
+.form_call_us_flex_in_input {
+  max-width: 350px;
+  width: 100%;
+  background: #fff;
+  padding: 12px 20px;
+  margin: 0 0 25px 0;
+  border-radius: 15px;
+  input {
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #50575B;
+    font-size: 16px;
+    cursor: text;
+  }
+  p {
+    color: #B2B2B2;
+    font-size: 14px;
+    margin: 0 0 5px 0;
+  }
+}
+
+.sms_ic {
+  display: inline-block;
+  width: 208px;
+  height: 143px;
+  background: url(/sms_ic.svg) 0 0 no-repeat;
+  position: absolute;
+  top: 55%;
+  right: 70px;
+  margin-top: -60px;
+}
+
+.form_call_us_flex_in_num {
+  max-width: 350px;
+  width: 100%;
+  padding: 12px 20px 12px 0;
+  a {
+    display: block;
+    text-decoration: none;
+    color: #50575B;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  p {
+    font-size: 14px;
+    color: #B1B1B1;
+    margin: 0;
+  }
+}
+
+.form_call_us_flex_in_num_btns {
+  display: flex;
+  justify-content: flex-start;
+  a {
+    width: 150px;
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    color: #50575B;
+    text-decoration: none;
+    padding: 15px 0 15px 20px;
+    margin: 0 10px 0 0;
+    border: 1px solid #E5E5E5;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all .2s;
+    * {
+      cursor: pointer;
+    }
+  }
+  a:first-child {
+    background: url(/whatsapp_ic.svg) 18px center no-repeat;
+    &:hover {
+      background: #E5E5E5 url(/whatsapp_ic.svg) 18px center no-repeat;
+    }
+  }
+  a:last-child {
+    background: url(/teleg_ic.svg) 18px center no-repeat;
+    &:hover {
+      background: #E5E5E5 url(/teleg_ic.svg) 18px center no-repeat;
+    }
+  }
+}
+
+.consult_ic {
+  display: inline-block;
+  width: 165px;
+  height: 190px;
+  background: url(/consult_ic.svg) 0px 0px no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 70px;
+  margin-top: -90px;
+}
+
+
+
+

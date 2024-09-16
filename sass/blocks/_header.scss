@@ -473,17 +473,14 @@
 .jalousie {
   position: absolute;
 
-
   background: #6691B9;
-  width: 100vw;
   left: -200%;
-  height: 0;
   opacity: 0;
   z-index: 100;
   transition: all 0.3s ease;
 }
 .jalousie.active {
-  height: 200vh !important;
+  inset: 0;
   opacity: 0.7 !important;
-  left: 0;
+
 }
