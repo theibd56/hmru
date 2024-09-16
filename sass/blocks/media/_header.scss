@@ -120,6 +120,7 @@
       text-overflow: ellipsis;
       color: #50575b;
       outline: 0;
+      height: 40px;
     }
     .main_search_block_in button {
       display: block;
@@ -142,24 +143,27 @@
       margin: 0 5px;
     }
     .main_search_block_in_result .link_section {
-      display: none;
+      display: none !important;
       border-bottom: unset;
     }
     .main_search_block_in_result a {
-      display: flex;
-      padding: 10px 0;
+      display: flex !important;
+      padding: 10px 3px !important;
       align-items: center;
       -moz-column-gap: 16px;
       column-gap: 16px;
       color: #50575b;
-      font-size: 14px;
+      font-size: 14px !important;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
       text-decoration: unset;
-      border-bottom: 1px solid #e7e7e7;
+      &:not(:last-child){
+        border-bottom: 1px solid #e7e7e7;
+      }
     }
     .link-photo {
+      display: block !important;
       flex: 0 0 50px;
       height: 50px;
     }
