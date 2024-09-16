@@ -128,3 +128,11 @@ $(document).on('click', function(e) {
         $('#show-catalog .basket').toggleClass('hide')
     }
 })
+
+$('.header__nav_more').hover(function() {
+    $('.header__nav_more-content').slideToggle()
+})
+
+$('.header__search').hover(function() {
+    $('.main_search_block_in_result').slideToggle()
+})
