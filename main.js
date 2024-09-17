@@ -137,13 +137,6 @@ $('.mobile-catalog__item').on('click', function() {
     }
 })
 
-if($(window).width() > 992) {
-    $('.catalog_flex_main_left').show(100)
-    $('.catalog_flex_main_right').show(100)
-} else {
-    $('.catalog_flex_main_left').hide(100)
-}
-
 //click jalousie and close catalog dropdown
 $(document).on('click', function(e) {
     if(e.target.className == "jalousie active") {
