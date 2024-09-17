@@ -1,0 +1,137 @@
+@media screen and (max-width: 1250px){
+  .catalog_flex_main_right_flex {
+    grid-template: minmax(230px, auto) / repeat(3, 1fr);
+  }
+  .form_call_us_flex {
+    flex-direction: column;
+    gap: 10px;
+    &_in {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 992px){
+  .catalog_flex_main_right_flex {
+    grid-template: minmax(230px, auto) / repeat(3, 1fr);
+  }
+  .form_call_us_flex {
+    flex-direction: column;
+    &_in {
+      width: 100%;
+    }
+  }
+
+  .form_call_us_subtitle {
+    margin: 0 0 10px 0 !important;
+  }
+
+  .mobile-catalog {
+    display: flex;
+  }
+  .catalog_flex_main_left {
+    display: none;
+    max-width: 100%;
+  }
+  .catalog_flex_main_left.active, .catalog_flex_main_right.active {
+    display: block !important;
+  }
+  .catalog_flex_main_left.hidden, .catalog_flex_main_right.hidden {
+    display: none !important;
+  }
+  .kroshki {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .catalog_flex_main_right_flex {
+    grid-template: minmax(230px, auto) / repeat(2, 1fr);
+  }
+  .sms_ic {
+    right: 35px;
+  }
+  .consult_ic {
+    right: 40px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .kroshki a {
+    font-size: 12px;
+  }
+  .block_heading_with_link {
+    gap: 5px;
+    h1 {
+      font-weight: 700;
+      font-size: 22px;
+    }
+  }
+  .catalog_flex_main_right_flex {
+    grid-template: auto / repeat(2, 1fr);
+  }
+  .catalog_flex_main_right_flex_in img {
+    height: 85px;
+  }
+  .catalog_flex_main_right_flex_in p {
+    font-size: 14px;
+  }
+
+  .form_call_us_flex_in {
+    padding: 20px;
+    .form_call_us_header {
+      font-size: 20px;
+      width: calc(100% - 100px);
+    }
+    .form_call_us_subtitle {
+      font-size: 14px;
+      width: calc(100% - 90px);
+    }
+    .form_call_us_flex_in_input {
+      max-width: 100%;
+    }
+    .form_call_us_flex_in_num {
+      a {
+        font-size: 16px;
+      }
+      p {
+        width: calc(100% - 50px);
+      }
+    }
+
+    .sms_ic {
+      width: 87px;
+      height: 60px;
+      background-size: contain;
+
+      margin: 0;
+      top: 5%;
+      right: 20px;
+    }
+    .consult_ic {
+      width: 71px;
+      height: 82px;
+      background-size: contain;
+
+      top: 30%;
+      right: 20px;
+      margin: 0;
+    }
+
+
+    button {
+      font-size: 15px;
+    }
+    &:not(:first-child) {
+      .form_call_us_header, .form_call_us_subtitle {
+        width: 100%;
+      }
+    }
+  }
+}
+//
+//@media screen and (max-width: 350px) {
+//  .catalog_flex_main_right_flex {
+//    grid-template: auto / 1fr;
+//  }
+//}

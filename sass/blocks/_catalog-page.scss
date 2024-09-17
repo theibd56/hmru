@@ -21,8 +21,9 @@
 .block_heading_with_link {
   width: 100%;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
   margin: 0 0 25px 0;
   max-width: 1030px;
   h1 {
@@ -65,6 +66,9 @@
   padding: 15px 10px;
   transition: all .2s;
   cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
   img {
     display: block;
     width: auto;
@@ -72,13 +76,16 @@
     margin: 0 auto;
   }
   p {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     font-weight: 400;
     font-size: 19px;
     text-align: center;
     margin: 15px 0 0 0;
     color: #303239;
+    flex-grow: 1;
   }
   * {
     cursor: pointer;
@@ -195,6 +202,80 @@
   }
 }
 
+
+.in_links_show_in1 {
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.in_links_show a {
+  color: #50575B;
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
+  padding: 4px 0;
+  margin: 4px 0;
+}
+
+.in_links_show_in1 i {
+  display: inline-block;
+  background: url(/arrow_select.svg) right 0px no-repeat;
+  background-size: 10px;
+  width: 22px;
+  height: 6px;
+  flex-shrink: 0;
+  transition: all .2s;
+}
+
+.in_links_show_in2 {
+  display: none;
+  padding: 0 10px 0 25px;
+}
+
+.in_links_show a {
+  color: #50575B;
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
+  padding: 4px 0;
+  margin: 4px 0;
+}
+
+.mobile-catalog {
+  display: none;
+  align-items: center;
+
+  padding: 5px;
+
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 10px 0 rgba(62, 83, 97, 0.1);
+  &__item {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+  }
+  &__item.active {
+    background: #2086cf;
+    svg path {
+      fill: #fff;
+    }
+  }
+  * {
+    cursor: pointer;
+    transition: all .2s;
+  }
+}
+
 .form_call_us {
   margin: 0 0 60px 0;
 }
@@ -216,12 +297,14 @@
     line-height: 1.1em;
     font-weight: bold;
     display: block;
+    color: #50575b;
   }
   .form_call_us_subtitle {
     font-size: 18px;
     margin: 0 0 30px 0;
     font-weight: 400;
     display: block;
+    color: #50575b;
   }
   button {
     width: 150px;

@@ -119,6 +119,31 @@ $('.filrt_form_in_head').click(function () {
     $('.filrt_form_in_head').not(this).removeClass('filrt_form_in_head_show').next().slideUp('fast');
 });
 
+$('.in_links_show_in1').click(function () {
+    $(this).toggleClass('in_links_show_in1_show').next().slideToggle('fast');
+    $('.in_links_show_in1').not(this).removeClass('in_links_show_in1_show').next().slideUp('fast');
+});
+
+$('.mobile-catalog__item').on('click', function() {
+    $('.mobile-catalog__item').removeClass('active')
+    $(this).addClass('active')
+
+    if ($(this).hasClass('mobile-catalog__grid')) {
+        $('.catalog_flex_main_left').removeClass('active').addClass('hidden')
+        $('.catalog_flex_main_right').removeClass('hidden').addClass('active')
+    } else {
+        $('.catalog_flex_main_left').removeClass('hidden').addClass('active')
+        $('.catalog_flex_main_right').removeClass('active').addClass('hidden')
+    }
+})
+
+if($(window).width() > 992) {
+    $('.catalog_flex_main_left').show(100)
+    $('.catalog_flex_main_right').show(100)
+} else {
+    $('.catalog_flex_main_left').hide(100)
+}
+
 //click jalousie and close catalog dropdown
 $(document).on('click', function(e) {
     if(e.target.className == "jalousie active") {
