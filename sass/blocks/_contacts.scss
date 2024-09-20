@@ -79,13 +79,31 @@
     gap: 30px;
   }
   &__located {
+    padding-bottom: 46px;
     &:not(:last-child) {
       border-bottom: 1px solid #edeef0;
     }
+    &:last-child {
+      padding-bottom: 100px;
+    }
+    &_section {
+      min-width: 0;
+      &-video {
+        width: 360px;
+        min-width: 360px;
+      }
+      .contacts__located_title {
+        display: none;
+      }
+    }
     &_top {
-      display: grid;
-      grid-template: 405px / 1fr 360px;
-      gap: 55px;
+      &-heading, &-wrapper {
+        display: grid;
+        grid-template: auto / 1fr 360px;
+        column-gap: 120px;
+        row-gap: 20px;
+        min-width: 0;
+      }
     }
     &_title {
       font-weight: 400;
@@ -97,10 +115,11 @@
     }
 
     &_slider {
-      max-width: 1155px;
       position: relative;
       .swiper {
         z-index: 0;
+        box-sizing: border-box;
+        width: 100%;
         .swiper-wrapper {
           height: 360px;
         }
@@ -108,11 +127,15 @@
           border-radius: 10px;
           overflow: hidden;
           outline: none;
+
+          display: block;
           img {
             width: 100%;
             height: 100%;
             border-radius: 10px;
             cursor: pointer;
+
+            object-fit: cover;
           }
         }
       }
@@ -155,14 +178,14 @@
     }
     &_video {
       display: block;
+
       position: relative;
-
-
+      width: 100%;
+      height: 360px;
       img {
-        width: 360px;
+        width: 100%;
         height: 360px;
         object-fit: cover;
-
         border-radius: 10px;
       }
       &:before {
@@ -179,6 +202,13 @@
 
         cursor: pointer;
       }
+    }
+
+    &_map {
+      margin-top: 60px;
+      height: 400px;
+      border-radius: 10px;
+      overflow: hidden;
     }
   }
 }

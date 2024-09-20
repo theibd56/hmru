@@ -6,13 +6,57 @@ import './sass/_style.scss';
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import 'swiper/css/bundle';
 
+// Подключаем Yandex Maps API
+const script = document.createElement('script');
+script.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU";
+script.type = "text/javascript";
+document.head.appendChild(script);
+
+// Инициализация карты после загрузки Yandex Maps API
+script.onload = () => {
+    ymaps.ready(init);
+
+    function init() {
+        // Создание карты
+        const map = new ymaps.Map('map', {
+            center: [55.075649, 82.893480], // Центр карты
+            zoom: 10, // Масштаб
+            controls: [] // Контроллеры
+        });
+
+        const map2 = new ymaps.Map('map2', {
+            center: [55.075649, 82.893480], // Центр карты
+            zoom: 10, // Масштаб
+            controls: [] // Контроллеры
+        });
+
+        // Создание маркера
+        const marker = new ymaps.Placemark([55.075649, 82.893480], {
+            iconLayout: 'default#image',
+            iconImageHref: 'https://img.icons8.com/?size=100&id=7880&format=png&color=339AF0',
+            iconImageSize: [50, 50],
+            iconImageOffset: [-25, -50] // Смещение иконки для корректного отображения
+        });
+
+        const marker2 = new ymaps.Placemark([55.075649, 82.893480], {
+            iconLayout: 'default#image',
+            iconImageHref: 'https://img.icons8.com/?size=100&id=7880&format=png&color=339AF0',
+            iconImageSize: [50, 50],
+            iconImageOffset: [-25, -50] // Смещение иконки для корректного отображения
+        });
+
+        // Добавление маркера на карту
+        map.geoObjects.add(marker);
+        map2.geoObjects.add(marker2);
+    }
+};
+
 //fancybox (может конфликтовать)
 Fancybox.bind("[data-fancybox]", {
     // Your custom options
 });
 
 //slider
-
 const popularSlider = new Swiper('.catalog-popular__container', {
     slidesPerView: 3,
     spaceBetween: 20,
@@ -30,30 +74,47 @@ const popularSlider = new Swiper('.catalog-popular__container', {
     },
 })
 
-const contactsSlider = new Swiper('.contacts__located_slider .swiper', {
-    slidesPerView: 5,
-    spaceBetween: 20,
-    loop: false,
-    navigation: {
-        nextEl: '.contacts__arrow_next',
-        prevEl: '.contacts__arrow_prev',
-    },
-    autoplay: {
-        delay: 6000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-    },
-    // breakpoints: {
-    //     300: {
-    //         slidesPerView: 2.25,
-    //     },
-    //     576: {
-    //         slidesPerView: 3,
-    //     },
-    //     992: {
-    //         slidesPerView: 4,
-    //     },
-    // },
+const sliders = document.querySelectorAll('.contacts__located_slider .swiper'),
+    prevArrow = document.querySelectorAll('.contacts__arrow_prev'),
+    nextArrow = document.querySelectorAll('.contacts__arrow_next');
+
+sliders.forEach((slider, index) => {
+    const contactsSlider = new Swiper(slider, {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        loop: false,
+        autoplay: {
+            delay: 6000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        navigation: {
+            nextEl: nextArrow[index],
+            prevEl: prevArrow[index],
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 1.5,
+                spaceBetween: 10,
+            },
+            425: {
+                slidesPerView: 2,
+            },
+            576: {
+                slidesPerView: 2.75,
+            },
+            768: {
+                slidesPerView: 3.25,
+                spaceBetween: 20,
+            },
+            1200: {
+                slidesPerView: 4,
+            },
+            1500: {
+                slidesPerView: 5,
+            },
+        },
+    });
 })
 
 //toggle catalog

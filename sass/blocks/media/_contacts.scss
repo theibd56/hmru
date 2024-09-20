@@ -1,0 +1,108 @@
+@media screen and (max-width: 1500px) {
+  .contacts__heading_wrapper {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .contacts__heading_item {
+    padding: 30px 50px 30px 0;
+  }
+  .contacts__located_top {
+    gap: 60px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .contacts__heading {
+    flex-direction: column;
+  }
+  .contacts__heading_item {
+    padding: 30px 0 30px;
+    &:not(:first-child) {
+      padding: 30px 0 30px;
+      border: none
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid #edeef0;
+    }
+  }
+
+  .contacts__located_top-heading,
+  .contacts__located_top-wrapper{
+    grid-template: auto / 1fr 300px;
+    column-gap: 60px;
+  }
+  .contacts__located_section-video {
+    width: 300px;
+    min-width: 300px;
+  }
+}
+
+@media screen and (max-width: 998px) {
+  .contacts__located_top-wrapper{
+    grid-template: auto / 1fr;
+    column-gap: 60px;
+    .contacts__located_title {
+      display: block;
+    }
+  }
+  .contacts__located_top-heading {
+    display: none;
+  }
+  .contacts__located_section-video {
+    width: 100%;
+    min-width: 100%;
+  }
+  .contacts__located_slider-navigate {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contacts__title {
+    font-size: 24px;
+    margin: 15px 0 20px;
+  }
+  .contacts__heading {
+    &_item, &_item:not(:first-child) {
+      padding: 20px 0 20px;
+    }
+    &_title {
+      font-size: 18px;
+    }
+    &_address {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    &_wrapper {
+      margin-top: 10px;
+    }
+    &_subtitle {
+      font-size: 13px;
+    }
+    &_text {
+      font-size: 14px;
+    }
+  }
+  .contacts__located {
+    padding-bottom: 30px;
+    &:last-child {
+      padding-bottom: 40px;
+    }
+    &_title {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    &_slider {
+
+      .swiper-wrapper {
+        height: 340px !important;
+      }
+    }
+    &_video, &_video img {
+      height: 320px;
+    }
+    &_map {
+      margin-top: 20px;
+    }
+  }
+}
