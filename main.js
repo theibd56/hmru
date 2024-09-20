@@ -6,6 +6,11 @@ import './sass/_style.scss';
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import 'swiper/css/bundle';
 
+//fancybox (может конфликтовать)
+Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+});
+
 //slider
 
 const popularSlider = new Swiper('.catalog-popular__container', {
@@ -25,7 +30,33 @@ const popularSlider = new Swiper('.catalog-popular__container', {
     },
 })
 
-// //toggle catalog
+const contactsSlider = new Swiper('.contacts__located_slider .swiper', {
+    slidesPerView: 5,
+    spaceBetween: 20,
+    loop: false,
+    navigation: {
+        nextEl: '.contacts__arrow_next',
+        prevEl: '.contacts__arrow_prev',
+    },
+    autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
+    // breakpoints: {
+    //     300: {
+    //         slidesPerView: 2.25,
+    //     },
+    //     576: {
+    //         slidesPerView: 3,
+    //     },
+    //     992: {
+    //         slidesPerView: 4,
+    //     },
+    // },
+})
+
+//toggle catalog
 $(function() {
     $('#show-catalog').on('click', () => {
         if (window.innerWidth > 992) {
