@@ -12,14 +12,13 @@
 
 body {
   font-family: 'PT Root UI', sans-serif;
-  //background: #fff;
-  font-style: normal;
-  font-weight: normal;
-  //background: #e8e8e8;
   overflow-x: hidden;
   color: #303239;
   cursor: default;
   position: relative;
+
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
 }
 
 .container {
