@@ -19,28 +19,34 @@ script.onload = () => {
     function init() {
         // Создание карты
         const map = new ymaps.Map('map', {
-            center: [55.075649, 82.893480], // Центр карты
+            center: [55.759886, 37.764079], // Центр карты
             zoom: 10, // Масштаб
             controls: [] // Контроллеры
         });
 
         const map2 = new ymaps.Map('map2', {
-            center: [55.075649, 82.893480], // Центр карты
+            center: [55.795180, 37.986879], // Центр карты
             zoom: 10, // Масштаб
             controls: [] // Контроллеры
         });
 
         // Создание маркера
-        const marker = new ymaps.Placemark([55.075649, 82.893480], {
+        const marker = new ymaps.Placemark([55.759886, 37.764079], {
+            balloonContent: ''
+        }, {
             iconLayout: 'default#image',
-            iconImageHref: 'https://img.icons8.com/?size=100&id=7880&format=png&color=339AF0',
+            // iconImageHref: 'https://img.icons8.com/?size=100&id=7880&format=png&color=339AF0',
+            iconImageHref: '/public/gps.svg',
             iconImageSize: [50, 50],
             iconImageOffset: [-25, -50] // Смещение иконки для корректного отображения
         });
 
-        const marker2 = new ymaps.Placemark([55.075649, 82.893480], {
+        const marker2 = new ymaps.Placemark([55.795180, 37.986879], {
+            balloonContent: ''
+        }, {
             iconLayout: 'default#image',
-            iconImageHref: 'https://img.icons8.com/?size=100&id=7880&format=png&color=339AF0',
+            // iconImageHref: 'https://img.icons8.com/?size=100&id=7880&format=png&color=339AF0',
+            iconImageHref: '/public/gps.svg',
             iconImageSize: [50, 50],
             iconImageOffset: [-25, -50] // Смещение иконки для корректного отображения
         });
