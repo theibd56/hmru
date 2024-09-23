@@ -36,7 +36,7 @@ script.onload = () => {
         }, {
             iconLayout: 'default#image',
             // iconImageHref: 'https://img.icons8.com/?size=100&id=7880&format=png&color=339AF0',
-            iconImageHref: '/public/gps.svg',
+            iconImageHref: '/gps.svg',
             iconImageSize: [50, 50],
             iconImageOffset: [-25, -50] // Смещение иконки для корректного отображения
         });
@@ -46,7 +46,7 @@ script.onload = () => {
         }, {
             iconLayout: 'default#image',
             // iconImageHref: 'https://img.icons8.com/?size=100&id=7880&format=png&color=339AF0',
-            iconImageHref: '/public/gps.svg',
+            iconImageHref: '/gps.svg',
             iconImageSize: [50, 50],
             iconImageOffset: [-25, -50] // Смещение иконки для корректного отображения
         });
