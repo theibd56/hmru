@@ -59,7 +59,7 @@
     padding: 70px 20px;
     &__title {
       span {
-        font-size: 32px;
+        font-size: 30px;
       }
     }
     &__sticker {
@@ -81,7 +81,6 @@
 
 @media  screen and (max-width: 435px) {
   .invite__title span {
-    word-break: break-all;
     &:first-child {
       margin-bottom: 10px;
     }
