@@ -1,59 +1,42 @@
 @media screen and (max-width: 1400px) {
   .invite__img {
-    transform: scale(0.75);
-    right: -100px;
+    transform: scale(0.85);
+    left: 765px;
   }
 }
 
 @media screen and (max-width: 1200px) {
   .invite {
     padding: 100px 50px;
+  }
+  .invite__title {
+    span {
+      font-size: 50px;
+    }
+  }
+  .invite__description {
+    max-width: 600px;
+    font-size: 22px;
   }
   .invite__img {
-    display: none;
-  }
-  .invite__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    text-align: center;
-  }
-  .invite__form {
-    margin: 60px auto 0;
-  }
-}
-
-
-@media screen and (max-width: 1200px) {
-  .invite {
-    padding: 100px 50px;
-    &__title {
-      span {
-        font-size: 48px;
-      }
-    }
-    &__img {
-      display: none;
-    }
-    &__content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      text-align: center;
-    }
-    &__form {
-      margin: 60px auto 0;
-    }
+    left: 650px;
   }
 }
 
 @media screen and (max-width: 998px) {
+  .invite {
+    &__title {
+      span {
+        font-size: 42px;
+      }
+    }
+
+  }
   .invite__img_letters {
     bottom: -100px;
   }
   .invite__form {
+    max-width: 100%;
     margin: 40px auto 0;
     &_title {
       text-align: center;
@@ -65,6 +48,9 @@
         height: 64px;
       }
     }
+  }
+  .invite__img {
+    display: none;
   }
 }
 
@@ -89,6 +75,15 @@
       &_title {
         font-size: 24px;
       }
+    }
+  }
+}
+
+@media  screen and (max-width: 435px) {
+  .invite__title span {
+    word-break: break-all;
+    &:first-child {
+      margin-bottom: 10px;
     }
   }
 }
