@@ -252,3 +252,42 @@ $('.header__nav_more').hover(function() {
 $('.header__search').hover(function() {
     $('.main_search_block_in_result').slideToggle()
 })
+
+
+//привязать к скрипту с добавлением класса filled на бою как на форме auth / register
+//код тестовый для визуала
+const inviteItems = document.querySelectorAll('.invite__form_input')
+inviteItems.forEach(item => {
+    const inviteInput = item.querySelector('input')
+    item.addEventListener('change', function() {
+        if(inviteInput.value.length > 0) {
+            item.classList.add('filled')
+        } else {
+            item.classList.remove('filled')
+        }
+    })
+
+})
+
+//скрипт для маски телефона
+document.querySelector('#invitePhone').onkeydown = function(e){
+    inputphone(e,document.querySelector('#invitePhone'))
+}
+function inputphone(e, phone){
+    function stop(event) {
+        event.preventDefault();
+    }
+    let key = e.key, v = phone.value, not = key.replace(/([0-9])/, 1)
+
+    if(not == 1 || 'Backspace' === not){
+        if('Backspace' != not){
+            if(v.length < 4 || v ===''){phone.value= '+7 ('}
+            if(v.length === 7){phone.value= v +') '}
+            if(v.length === 11){phone.value= v +'-'}
+            if(v.length === 14){phone.value= v +'-'}
+        }
+    }
+    else {
+        stop(e)
+    }
+}

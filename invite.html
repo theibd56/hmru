@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HMRU Invite friends</title>
+</head>
+<body>
+
+{{> _header}}
+
+<main class="main">
+    <div class="container">
+        <div class="kroshki">
+            <a href="/" title="Главная">
+                Главная
+            </a>
+            <span>/</span>
+            <a href="/" title="Схема проезда">
+                Пригласи друга
+            </a>
+            <section class="invite">
+                <div class="invite__content">
+                    <div class="invite__title">
+                        <span>Тебе - гарантированный <b>кэшбэк</b></span>
+                        <span>Другу - гарантированная <b>скидка</b></span>
+                    </div>
+                    <div class="invite__sticker">
+                        <span>Вместе выгодней!</span>
+                    </div>
+                    <div class="invite__description">
+                        <b>Делитесь информацией</b> о нашей компании и продуктах с друзьями, получайте уникальный промокод, оставайтесь в плюсе вместе!
+                    </div>
+                </div>
+                <div class="invite__form">
+                    <div class="invite__form_title">
+                        Узнайте подробности программы
+                    </div>
+                    <form action="POST">
+                        <label class="invite__form_input">
+                            <input type="text" name="name" maxlength="100">
+                            <span>Имя</span>
+                        </label>
+                        <label class="invite__form_input">
+                            <input type="tel" name="phone" id="invitePhone" maxlength="17">
+                            <span>Телефон</span>
+                        </label>
+                        <button type="submit">Отправить</button>
+
+                    </form>
+                </div>
+                <img class="invite__img" src="/public/invite-bg.png" alt="">
+                <img class="invite__img_letters" src="/public/invite-text-bg.svg" alt="">
+            </section>
+        </div>
+    </div>
+</main>
+
+{{> _footer}}
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script type="module" src="/main.js"></script>
+</body>
+</html>

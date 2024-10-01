@@ -9,6 +9,7 @@ export default defineConfig({
                 main: resolve(__dirname, 'index.html'),
                 catalog: resolve(__dirname, 'catalog.html'),
                 contacts: resolve(__dirname, 'contacts.html'),
+                invite: resolve(__dirname, 'invite.html'),
             },
         },
     },

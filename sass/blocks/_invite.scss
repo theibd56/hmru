@@ -1,0 +1,161 @@
+.invite {
+  width: 100%;
+  //height: 500px;
+  padding: 114px 100px;
+  margin: 32px 0 100px;
+
+  background: hsla(0, 0%, 100%, 1);
+  background: radial-gradient(circle, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 70%, 1) 100%);
+  background: -moz-radial-gradient(circle, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 70%, 1) 100%);
+  background: -webkit-radial-gradient(circle, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 70%, 1) 100%);
+
+  border-radius: 30px 30px 0 0;
+
+  position: relative;
+  overflow: hidden;
+
+  &__title {
+    max-width: 909px;
+    span {
+      font-weight: 400;
+      font-size: 60px;
+
+      /* line-height: 65px; */
+      line-height: 1.08333;
+      color: #2d3133;
+
+      margin: 0;
+    }
+  }
+  &__sticker {
+      width: 100%;
+      max-width: 493px;
+      padding: 12px 21px;
+      margin-top: 27px;
+
+      background: #2086CF;
+      clip-path: polygon(0 0, 100% 0, 98% 100%, 0 100%);
+
+      transform: rotate(-1deg);
+
+      span {
+        font-weight: 700;
+        font-size: 34px;
+        color: #fff;
+
+        margin: 0;
+      }
+    }
+  &__description {
+    max-width: 680px;
+    margin-top: 29px;
+
+    font-size: 25px;
+    color: #2d3133;
+    font-weight: 400;
+  }
+  &__form {
+    border-radius: 30px;
+    max-width: 810px;
+    margin-top: 60px;
+    padding: 35px 40px 40px;
+
+    background: #f7f8fa;
+
+    position: relative;
+    z-index: 1;
+    form {
+      display: flex;
+      gap: 20px;
+      label {
+        display: block;
+        position: relative;
+        span {
+          position: absolute;
+          left: 20px;
+          top: 21px;
+          color: #A5A9BA;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22px;
+          pointer-events: none;
+          transition: all 0.3s ease;
+
+          margin: 0;
+        }
+      }
+      label.filled {
+        span {
+          top: 12px;
+        }
+      }
+      input {
+        width: 100%;
+        max-width: 230px;
+        //height: 65px;
+
+        padding: 31px 20px 12px;
+
+        border-radius: 15px;
+        border: none;
+        outline: none;
+        background: #fff;
+
+        font-weight: 400;
+        font-size: 16px;
+
+        /* line-height: 22px; */
+        line-height: 1.35;
+        color: #50575b;
+        &:focus + span {
+          top: 12px;
+        }
+      }
+      button {
+        width: 100%;
+        max-width: 230px;
+        font-weight: 700;
+        font-size: 18px;
+
+        /* line-height: 24px; */
+        line-height: 1.35;
+        color: #fff;
+
+        background: #2086cf;
+        border-radius: 15px;
+        border: none;
+        outline: none;
+
+        cursor: pointer;
+
+        transition: all .3s;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+    &_title {
+      font-weight: 700;
+      font-size: 32px;
+      color: #2d3133;
+
+      margin-bottom: 22px;
+    }
+  }
+  &__img {
+    position: absolute;
+
+    right: 30px;
+    bottom: 133px;
+    z-index: 1;
+    &_letters {
+      position: absolute;
+      z-index: 0;
+      width: 100%;
+      right: 0;
+      left: 0;
+      bottom: -247px;
+    }
+  }
+}
