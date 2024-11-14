@@ -11,6 +11,7 @@ export default defineConfig({
                 contacts: resolve(__dirname, 'contacts.html'),
                 invite: resolve(__dirname, 'invite.html'),
                 categories: resolve(__dirname, 'categories.html'),
+                subCategories: resolve(__dirname, 'sub-categories.html'),
             },
         },
     },
