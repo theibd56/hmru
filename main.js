@@ -104,7 +104,7 @@ sliders.forEach((slider, index) => {
                 spaceBetween: 10,
             },
             425: {
-                slidesPerView: 2,
+                slidesPerView: 2.25,
             },
             576: {
                 slidesPerView: 2.75,

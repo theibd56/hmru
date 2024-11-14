@@ -1,0 +1,126 @@
+.block_banner_section {
+  a {
+    display: block;
+    width: 100%;
+    height: 263px;
+    position: relative;
+    cursor: pointer;
+    img {
+      border-radius: 20px;
+
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      inset: 0;
+
+      object-fit: cover;
+      cursor: pointer;
+    }
+  }
+}
+
+.block__categories {
+  display: grid;
+  grid-template: minmax(250px, auto) / repeat(6, 1fr);
+  gap: 10px;
+
+  margin: 20px 0;
+  &_item {
+    padding: 30px 15px 24px;
+    border-radius: 15px;
+    border: 1px solid #E7E7E7;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; //мб удалить
+    gap: 32px;
+    transition: all .3s ease;
+    cursor: pointer;
+    &-title {
+      color: #303239;
+      text-align: center;
+      font-size: 18px;
+      text-wrap: balance; //balance or pretty
+    }
+    &-image {
+      height: 120px;
+      position: relative;
+      img {
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: 2;
+      }
+      &:before {
+        content: '';
+        display: block;
+        width: 130px;
+        height: 130px;
+        background: #F7F8FA;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        border-radius: 50%;
+      }
+    }
+    &:hover {
+      box-shadow: 0px 20px 100px rgba(0, 0, 0, 0.1);
+      border-color: #fff;
+    }
+    * {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .block__categories {
+    grid-template: minmax(250px, auto) / repeat(4, 1fr);
+  }
+  .block_banner_section a {
+    height: auto;
+    img {
+      position: static;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .block__categories {
+    grid-template: minmax(250px, auto) / repeat(3, 1fr);
+  }
+  .block_banner_section a {
+    height: 400px;
+    img {
+      position: static;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .block__categories {
+    grid-template: minmax(155px, auto) / repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .block__categories {
+    grid-template: minmax(155px, auto) / repeat(2, 1fr);
+    &_item {
+      padding: 25px 15px 15px;
+      &-title {
+        font-size: 14px;
+      }
+      &-image {
+        height: 60px;
+        &:before {
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
+  }
+}

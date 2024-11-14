@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HMRU Catalog</title>
+    </head>
+    <body>
+
+        {{> _header}}
+
+        <main class="main">
+            <div class="container">
+                <div class="block_6">
+                    <div class="kroshki">
+                        <a href="/" title="Главная">
+                            Главная
+                        </a>
+                        <span>/</span>
+                        <a href="/catalog.html" title="Каталог">
+                            Каталог
+                        </a>
+                        <span>/</span>
+                        <a href="/categories.html" title="Оборудование для маркетплейсов">
+                            Оборудование для маркетплейсов
+                        </a>
+                    </div>
+                    <div class="block_heading_with_link custom_name_chapter">
+                        <h1>Оборудование для маркетплейсов</h1>
+                    </div>
+                    <div class="block_banner_section">
+                        <a href="#">
+                            <picture>
+                                <source media="(max-width: 992px)" srcset="/categories-mobile.png">
+                                <img src="/categories-desctop.png" alt="Описание изображения">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="block__categories">
+                        <a href="#" class="block__categories_item">
+                            <div class="block__categories_item-image">
+                                <img src="/categories-item-1.png" alt="">
+                            </div>
+                            <div class="block__categories_item-title">
+                                Упаковка
+                                в готовый пакет
+                            </div>
+                        </a>
+                        <a href="#" class="block__categories_item">
+                            <div class="block__categories_item-image">
+                                <img src="/categories-item-2.png" alt="">
+                            </div>
+                            <div class="block__categories_item-title">
+                                Упаковка
+                                в ПОФ пленку
+                            </div>
+                        </a>
+                        <a href="#" class="block__categories_item">
+                            <div class="block__categories_item-image">
+                                <img src="/categories-item-2.png" alt="">
+                            </div>
+                            <div class="block__categories_item-title">
+                                Упаковка
+                                в ПЭ пленку
+                            </div>
+                        </a>
+                        <a href="#" class="block__categories_item">
+                            <div class="block__categories_item-image">
+                                <img src="/categories-item-2.png" alt="">
+                            </div>
+                            <div class="block__categories_item-title">
+                                Упаковка
+                                в пузырчатую пленку
+                            </div>
+                        </a>
+                        <a href="#" class="block__categories_item">
+                            <div class="block__categories_item-image">
+                                <img src="/categories-item-2.png" alt="">
+                            </div>
+                            <div class="block__categories_item-title">
+                                Упаковка
+                                в стрейч пленку
+                            </div>
+                        </a>
+                        <a href="#" class="block__categories_item">
+                            <div class="block__categories_item-image">
+                                <img src="/categories-item-2.png" alt="">
+                            </div>
+                            <div class="block__categories_item-title">
+                                Упаковка в короба
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        {{> _footer}}
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script type="module" src="/main.js"></script>
+    </body>
+</html>

@@ -10,6 +10,7 @@ export default defineConfig({
                 catalog: resolve(__dirname, 'catalog.html'),
                 contacts: resolve(__dirname, 'contacts.html'),
                 invite: resolve(__dirname, 'invite.html'),
+                categories: resolve(__dirname, 'categories.html'),
             },
         },
     },
