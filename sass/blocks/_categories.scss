@@ -172,15 +172,15 @@
 
   margin: 20px 0;
   &_item {
-    padding: 20px 10px 5px;
+    padding: 30px 10px 5px;
     border-radius: 15px;
     border: 1px solid #E7E7E7;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; //мб удалить
-    gap: 32px;
+    //justify-content: center; //мб удалить
+    gap: 20px;
     transition: all .3s ease;
     cursor: pointer;
     &-title {
@@ -314,7 +314,8 @@
   .block__categories {
     grid-template: minmax(155px, auto) / repeat(2, 1fr);
     &_item {
-      padding: 25px 10px 5px;
+      padding: 20px 7px 5px;
+      gap: 16px;
       &-title {
         font-size: 14px;
       }
