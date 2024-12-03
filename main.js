@@ -348,3 +348,77 @@ productSlider.on('slideChangeTransitionStart', function() {
 productSliderNavigate.on('transitionStart', function(){
     productSlider.slideTo(productSliderNavigate.activeIndex);
 });
+
+//----------------- кнопка показать еще в характеристиках -----------------//
+if  (document.querySelectorAll('.product-info__characteristic_wrapper')) {
+
+    function createdMore (eachedElem, indexNum, trigger) {
+        eachedElem.forEach((item, index) => {
+            if(index > indexNum) {
+                item.classList.toggle('hidden')
+            }
+        })
+
+        trigger.innerText === 'Смотреть все характеристики' ?
+            trigger.innerText = 'Скрыть' :
+            trigger.innerText = 'Смотреть все характеристики';
+    }
+
+    const characteristicWrapperList = document.querySelectorAll('.product-info__characteristic')
+
+    characteristicWrapperList.forEach((characteristicWrapper) => {
+        const characteristicItem = characteristicWrapper.querySelectorAll('.product-info__characteristic_item')
+        const characteristicMore = characteristicWrapper.querySelector('.product-info__characteristic_more')
+
+        if (characteristicItem.length > 11) {
+            characteristicItem.forEach((item, index) => {
+                if(index > 10) {
+                    item.classList.add('hidden')
+                }
+            })
+
+            characteristicMore.classList.remove('hidden')
+        }
+
+        characteristicMore.addEventListener('click', () => {
+            createdMore(characteristicItem, 10, characteristicMore)
+            characteristicWrapper.classList.toggle('active')
+        })
+    })
+
+}
+
+//----------------- custom select -----------------//
+if (document.querySelector('.dropdown')) {
+    const dropdown = document.querySelector('.dropdown');
+    const input = dropdown.querySelector('input');
+    const listOfOptions = dropdown.querySelectorAll('.option');
+    const body = document.body;
+
+    if(input.value === '') {
+        input.value = listOfOptions[0].textContent;
+    }
+
+    const toggleDropdown = (event) => {
+        event.stopPropagation();
+        dropdown.classList.toggle('opened');
+    };
+
+    const selectOption = (event) => {
+        input.value = event.currentTarget.textContent;
+    };
+
+    const closeDropdownFromOutside = () => {
+        if (dropdown.classList.contains('opened')) {
+            dropdown.classList.remove('opened');
+        }
+    };
+
+    body.addEventListener('click', closeDropdownFromOutside);
+
+    listOfOptions.forEach((option) => {
+        option.addEventListener('click', selectOption);
+    });
+
+    dropdown.addEventListener('click', toggleDropdown);
+}
