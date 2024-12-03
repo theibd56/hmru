@@ -270,24 +270,81 @@ inviteItems.forEach(item => {
 })
 
 //скрипт для маски телефона
-document.querySelector('#invitePhone').onkeydown = function(e){
-    inputphone(e,document.querySelector('#invitePhone'))
-}
-function inputphone(e, phone){
-    function stop(event) {
-        event.preventDefault();
+if(document.querySelector('#invitePhone')) {
+    document.querySelector('#invitePhone').onkeydown = function(e){
+        inputphone(e,document.querySelector('#invitePhone'))
     }
-    let key = e.key, v = phone.value, not = key.replace(/([0-9])/, 1)
+    function inputphone(e, phone){
+        function stop(event) {
+            event.preventDefault();
+        }
+        let key = e.key, v = phone.value, not = key.replace(/([0-9])/, 1)
 
-    if(not == 1 || 'Backspace' === not){
-        if('Backspace' != not){
-            if(v.length < 4 || v ===''){phone.value= '+7 ('}
-            if(v.length === 7){phone.value= v +') '}
-            if(v.length === 11){phone.value= v +'-'}
-            if(v.length === 14){phone.value= v +'-'}
+        if(not == 1 || 'Backspace' === not){
+            if('Backspace' != not){
+                if(v.length < 4 || v ===''){phone.value= '+7 ('}
+                if(v.length === 7){phone.value= v +') '}
+                if(v.length === 11){phone.value= v +'-'}
+                if(v.length === 14){phone.value= v +'-'}
+            }
+        }
+        else {
+            stop(e)
         }
     }
-    else {
-        stop(e)
-    }
 }
+
+
+//----------------- слайдер для навигационного слайдера на странице продукта -----------------//
+const productSliderNavigate = new Swiper('.product-sliders__thumb', {
+    centeredSlidesBounds: true,
+    slidesPerView: 6,
+    spaceBetween: 10,
+    watchOverflow: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    direction: 'horizontal',
+    speed: 800,
+    // breakpoints: {
+    //     320: {
+    //         direction: 'horizontal',
+    //         slidesPerView: 5,
+    //     },
+    //     576: {
+    //         direction: 'horizontal',
+    //         slidesPerView: 6,
+    //     },
+    //     768: {
+    //         direction: 'horizontal',
+    //         slidesPerView: 7,
+    //     },
+    //     992: {
+    //         direction: 'vertical',
+    //     }
+    // }
+});
+
+//----------------- слайдер для главного слайдера на странице продукта -----------------//
+const productSlider = new Swiper('.product-sliders__main', {
+    speed: 800,
+    spaceBetween: 40,
+    watchOverflow: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    preventInteractionOnTransition: true,
+    thumbs: {
+        swiper: productSliderNavigate,
+    },
+    navigation: {
+        nextEl: '.product-sliders__next',
+        prevEl: '.product-sliders__prev',
+    },
+});
+
+productSlider.on('slideChangeTransitionStart', function() {
+    productSliderNavigate.slideTo(productSlider.activeIndex);
+});
+
+productSliderNavigate.on('transitionStart', function(){
+    productSlider.slideTo(productSliderNavigate.activeIndex);
+});
