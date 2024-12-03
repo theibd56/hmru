@@ -12,6 +12,7 @@ export default defineConfig({
                 invite: resolve(__dirname, 'invite.html'),
                 categories: resolve(__dirname, 'categories.html'),
                 subCategories: resolve(__dirname, 'sub-categories.html'),
+                product: resolve(__dirname, 'product.html'),
             },
         },
     },
