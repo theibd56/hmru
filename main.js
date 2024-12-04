@@ -422,3 +422,31 @@ if (document.querySelector('.dropdown')) {
 
     dropdown.addEventListener('click', toggleDropdown);
 }
+
+//materials slider
+const materialSlider = new Swiper('.product-materials__slider', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: false,
+    speed: 800,
+    navigation: {
+        nextEl: '.product-materials__next',
+        prevEl: '.product-materials__prev',
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
+    breakpoints: {
+        // 300: {
+        //     slidesPerView: 2.25,
+        // },
+        // 576: {
+        //     slidesPerView: 3,
+        // },
+        // 992: {
+        //     slidesPerView: 4,
+        // },
+    },
+})
