@@ -450,3 +450,31 @@ const materialSlider = new Swiper('.product-materials__slider', {
         // },
     },
 })
+
+//video slider
+const videoSlider = new Swiper('.product-description__video_slider', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: false,
+    speed: 800,
+    navigation: {
+        nextEl: '.product-description__next',
+        prevEl: '.product-description__prev',
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
+    breakpoints: {
+        // 300: {
+        //     slidesPerView: 2.25,
+        // },
+        // 576: {
+        //     slidesPerView: 3,
+        // },
+        // 992: {
+        //     slidesPerView: 4,
+        // },
+    },
+})
