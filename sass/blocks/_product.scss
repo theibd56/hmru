@@ -325,6 +325,8 @@
   }
 
   &-aside {
+    position: sticky;
+    top: 180px;
     border-radius: 15px;
     background: #FFF;
     box-shadow: 12px 0px 40px 0px rgba(0, 0, 0, 0.10);
