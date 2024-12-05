@@ -855,3 +855,68 @@
     }
   }
 }
+
+.cheaper-popup, .consultation-popup {
+  max-width: 400px !important;
+  padding: 30px !important;
+  border-radius: 15px !important;
+  background: #FFF !important;
+  box-shadow: 12px 0px 40px 0px rgba(0, 0, 0, 0.10);
+  &__title {
+    color: #50575B;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  &__input {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #E6EBEE;
+    background: #FFF;
+
+    color: #808080;
+    font-size: 18px;
+    font-weight: 400;
+
+    padding: 0 17px;
+    height: 45px;
+    outline: none;
+    cursor: text;
+    &-wrapper {
+      margin-top: 15px;
+    }
+  }
+  &__button {
+    margin-top: 25px;
+    border-radius: 80px;
+    background: #2086CF;
+    height: 50px;
+    width: 100%;
+
+    border: none;
+
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 500;
+    filter: drop-shadow(0px 8px 25px #AFD5F0);
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &__privacy {
+    margin-top: 15px;
+
+    color: #808080;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .f-button.is-close-btn {
+    top: 10px !important;
+    right: 10px !important;
+    --f-button-color: #50575B !important;
+  }
+}

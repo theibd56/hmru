@@ -891,7 +891,7 @@
                   </svg>
                   <span>Рассчитать доставку</span>
                 </a>
-                <a href="#" class="product-aside__cheaper">
+                <a data-fancybox href="#cheaper-popup" class="product-aside__cheaper">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M20 4H4C2.897 4 2 4.897 2 6V18C2 19.103 2.897 20 4 20H20C21.103 20 22 19.103 22 18V6C22 4.897 21.103 4 20 4ZM4 6H20V8H4V6ZM4 18V12H20.001L20.002 18H4Z" fill="#50575B"/>
                     <path d="M6 14H12V16H6V14Z" fill="#50575B"/>
@@ -922,9 +922,9 @@
                 <div class="product-aside__info_title">
                   Есть вопросы по данному товару?
                 </div>
-                <div class="product-aside__info_link">
+                <a data-fancybox href="#consultation-popup" class="product-aside__info_link">
                   Получить консультацию
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -932,10 +932,61 @@
       </div>
     </div>
   </main>
+  
+  <div class="cheaper-popup" id="cheaper-popup" style="display: none;">
+    <div class="cheaper-popup__title">
+      Нашли дешевле?
+    </div>
+    <form action="" class="cheaper-popup__form">
+      <div class="cheaper-popup__input-wrapper">
+        <input type="text" class="cheaper-popup__input" placeholder="Имя">
+      </div>
+      <div class="cheaper-popup__input-wrapper">
+        <input type="tel" class="cheaper-popup__input" placeholder="Телефон">
+      </div>
+      <div class="cheaper-popup__input-wrapper">
+        <input type="email" class="cheaper-popup__input" placeholder="Почта">
+      </div>
+      <div class="cheaper-popup__input-wrapper">
+        <input type="text" class="cheaper-popup__input" placeholder="Ссылка на товар">
+      </div>
+      <button class="cheaper-popup__button">
+        Отправить запрос
+      </button>
+      <p class="cheaper-popup__privacy">
+        Нажимая на кнопку вы даете согласие
+        на обработку персональных данных
+      </p>
+    </form>
+  </div>
+
+  <div class="consultation-popup" id="consultation-popup" style="display: none;">
+    <div class="consultation-popup__title">
+      Заполните данные
+    </div>
+    <form action="" class="cheaper-popup__form">
+      <div class="consultation-popup__input-wrapper">
+        <input type="text" class="cheaper-popup__input" placeholder="Имя">
+      </div>
+      <div class="consultation-popup__input-wrapper">
+        <input type="tel" class="cheaper-popup__input" placeholder="Телефон">
+      </div>
+      <div class="consultation-popup__input-wrapper">
+        <input type="email" class="cheaper-popup__input" placeholder="Почта">
+      </div>
+      <button class="consultation-popup__button">
+        Отправить запрос
+      </button>
+      <p class="consultation-popup__privacy">
+        Нажимая на кнопку вы даете согласие
+        на обработку персональных данных
+      </p>
+    </form>
+  </div>
 
   {{> _footer}}
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script type="module" src="/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script type="module" src="/main.js"></script>
   </body>
 </html>
