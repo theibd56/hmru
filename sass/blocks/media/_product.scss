@@ -535,4 +535,29 @@
     padding: 15px 20px;
     border-radius: 9px;
   }
+
+  .cheaper-popup, .consultation-popup {
+    //padding: 20px 15px !important;
+    &__title {
+      font-size: 20px;
+    }
+    &__input {
+      font-size: 14px;
+      height: 35px;
+      &-wrapper {
+        margin-top: 8px;
+      }
+    }
+    &__button {
+      margin-top: 12px;
+      height: 35px;
+      font-size: 14px;
+    }
+    &__privacy {
+      font-size: 12px;
+    }
+    .f-button.is-close-btn {
+      --f-button-bg: none !important;
+    }
+  }
 }
