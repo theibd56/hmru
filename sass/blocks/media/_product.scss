@@ -311,6 +311,9 @@
           line-height: 125%; /* 17.5px */
           letter-spacing: 0.07px;
         }
+        &.active {
+          min-width: auto !important;
+        }
       }
     }
     &-aside {
