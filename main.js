@@ -305,23 +305,32 @@ const productSliderNavigate = new Swiper('.product-sliders__thumb', {
     watchSlidesProgress: true,
     direction: 'horizontal',
     speed: 800,
-    // breakpoints: {
-    //     320: {
-    //         direction: 'horizontal',
-    //         slidesPerView: 5,
-    //     },
-    //     576: {
-    //         direction: 'horizontal',
-    //         slidesPerView: 6,
-    //     },
-    //     768: {
-    //         direction: 'horizontal',
-    //         slidesPerView: 7,
-    //     },
-    //     992: {
-    //         direction: 'vertical',
-    //     }
-    // }
+    breakpoints: {
+        320: {
+            slidesPerView: 3,
+        },
+        425: {
+            slidesPerView: 4,
+        },
+        576: {
+            slidesPerView: 5,
+        },
+        768: {
+            slidesPerView: 6,
+        },
+        992: {
+            slidesPerView: 7,
+        },
+        1250: {
+            slidesPerView: 4,
+        },
+        1500: {
+            slidesPerView: 5,
+        },
+        1630: {
+            slidesPerView: 6,
+        }
+    }
 });
 
 //----------------- слайдер для главного слайдера на странице продукта -----------------//
@@ -389,38 +398,41 @@ if  (document.querySelectorAll('.product-info__characteristic_wrapper')) {
 }
 
 //----------------- custom select -----------------//
-if (document.querySelector('.dropdown')) {
-    const dropdown = document.querySelector('.dropdown');
-    const input = dropdown.querySelector('input');
-    const listOfOptions = dropdown.querySelectorAll('.option');
-    const body = document.body;
+if (document.querySelectorAll('.dropdown')) {
+    const dropdowns = document.querySelectorAll('.dropdown');
 
-    if(input.value === '') {
-        input.value = listOfOptions[0].textContent;
-    }
+    dropdowns.forEach((dropdown) => {
+        const input = dropdown.querySelector('input');
+        const listOfOptions = dropdown.querySelectorAll('.option');
+        const body = document.body;
 
-    const toggleDropdown = (event) => {
-        event.stopPropagation();
-        dropdown.classList.toggle('opened');
-    };
-
-    const selectOption = (event) => {
-        input.value = event.currentTarget.textContent;
-    };
-
-    const closeDropdownFromOutside = () => {
-        if (dropdown.classList.contains('opened')) {
-            dropdown.classList.remove('opened');
+        if(input.value === '') {
+            input.value = listOfOptions[0].textContent;
         }
-    };
 
-    body.addEventListener('click', closeDropdownFromOutside);
+        const toggleDropdown = (event) => {
+            event.stopPropagation();
+            dropdown.classList.toggle('opened');
+        };
 
-    listOfOptions.forEach((option) => {
-        option.addEventListener('click', selectOption);
-    });
+        const selectOption = (event) => {
+            input.value = event.currentTarget.textContent;
+        };
 
-    dropdown.addEventListener('click', toggleDropdown);
+        const closeDropdownFromOutside = () => {
+            if (dropdown.classList.contains('opened')) {
+                dropdown.classList.remove('opened');
+            }
+        };
+
+        body.addEventListener('click', closeDropdownFromOutside);
+
+        listOfOptions.forEach((option) => {
+            option.addEventListener('click', selectOption);
+        });
+
+        dropdown.addEventListener('click', toggleDropdown);
+    })
 }
 
 //materials slider
@@ -439,15 +451,21 @@ const materialSlider = new Swiper('.product-materials__slider', {
         pauseOnMouseEnter: true,
     },
     breakpoints: {
-        // 300: {
-        //     slidesPerView: 2.25,
-        // },
-        // 576: {
-        //     slidesPerView: 3,
-        // },
-        // 992: {
-        //     slidesPerView: 4,
-        // },
+        300: {
+            slidesPerView: 1.7,
+            spaceBetween: 10,
+        },
+        576: {
+            slidesPerView: 2.5,
+            spaceBetween: 15,
+        },
+        768: {
+            spaceBetween: 30,
+            slidesPerView: 2.5,
+        },
+        1350: {
+            slidesPerView: 3,
+        }
     },
 })
 
@@ -467,14 +485,40 @@ const videoSlider = new Swiper('.product-description__video_slider', {
         pauseOnMouseEnter: true,
     },
     breakpoints: {
-        // 300: {
-        //     slidesPerView: 2.25,
-        // },
-        // 576: {
-        //     slidesPerView: 3,
-        // },
-        // 992: {
-        //     slidesPerView: 4,
-        // },
+        300: {
+            slidesPerView: 1.2,
+            spaceBetween: 10,
+        },
+        576: {
+            slidesPerView: 2.5,
+            spaceBetween: 15,
+        },
+        768: {
+            spaceBetween: 30,
+            slidesPerView: 2.5,
+        },
+        1350: {
+            slidesPerView: 3,
+        }
     },
 })
+
+// Получаем элементы
+const descriptionElement = document.querySelector('.product-description__text');
+const toggleButton = document.querySelector('.product-description__text_more');
+
+// Проверяем высоту и добавляем класс, если она больше 360px
+if (descriptionElement.clientHeight > 360) {
+    descriptionElement.classList.add('cropped');
+}
+
+// Обработчик клика для кнопки
+toggleButton.addEventListener('click', () => {
+    if (!descriptionElement.classList.contains('uncropped')) {
+        descriptionElement.classList.add('uncropped');
+        toggleButton.textContent = 'Скрыть';
+    } else {
+        descriptionElement.classList.remove('uncropped');
+        toggleButton.textContent = 'Показать больше';
+    }
+});
