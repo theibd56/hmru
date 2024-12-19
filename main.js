@@ -503,22 +503,57 @@ const videoSlider = new Swiper('.product-description__video_slider', {
     },
 })
 
-// Получаем элементы
-const descriptionElement = document.querySelector('.product-description__text');
-const toggleButton = document.querySelector('.product-description__text_more');
+document.addEventListener("DOMContentLoaded", function () {
+    const textBlock = document.querySelector(".product-description__text");
+    const moreButton = document.querySelector(".product-description__text_more");
 
-// Проверяем высоту и добавляем класс, если она больше 360px
-if (descriptionElement.clientHeight > 360) {
-    descriptionElement.classList.add('cropped');
-}
+    if (!textBlock || !moreButton) return;
 
-// Обработчик клика для кнопки
-toggleButton.addEventListener('click', () => {
-    if (!descriptionElement.classList.contains('uncropped')) {
-        descriptionElement.classList.add('uncropped');
-        toggleButton.textContent = 'Скрыть';
-    } else {
-        descriptionElement.classList.remove('uncropped');
-        toggleButton.textContent = 'Показать больше';
-    }
+    const maxHeight = window.innerWidth > 992 ? 242 : 360;
+
+    // Функция для проверки высоты с учетом задержки
+    const updateState = () => {
+        // Задержка для стабилизации изменения размеров
+        setTimeout(() => {
+            const height = textBlock.offsetHeight;
+            console.log("current height: " + height);
+
+            if (height > maxHeight) {
+                textBlock.classList.add("cropped");
+                textBlock.classList.remove("uncropped");
+                moreButton.textContent = "Показать больше";
+            } else {
+                textBlock.classList.add("uncropped");
+                textBlock.classList.remove("cropped");
+                moreButton.textContent = "Скрыть";
+            }
+
+            console.log(height > maxHeight);
+        }, 50); // Задержка для стабилизации
+    };
+
+    const toggleState = () => {
+        if (textBlock.classList.contains("uncropped")) {
+            textBlock.classList.remove("uncropped");
+            moreButton.textContent = "Показать больше";
+        } else {
+            textBlock.classList.add("uncropped");
+            moreButton.textContent = "Скрыть";
+        }
+    };
+
+    // Инициализация состояния
+    updateState();
+
+    // Добавляем слушатель на кнопку
+    moreButton.addEventListener("click", toggleState);
+
+    // Обработка события изменения размера окна
+    let resizeTimeout;
+    window.addEventListener("resize", () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            updateState();
+        }, 200); // Задержка после изменения размера окна
+    });
 });
