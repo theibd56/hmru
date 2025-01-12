@@ -245,15 +245,6 @@ $(document).on('click', function(e) {
     }
 })
 
-$('.header__nav_more').hover(function() {
-    $('.header__nav_more-content').slideToggle()
-})
-
-$('.header__search').hover(function() {
-    $('.main_search_block_in_result').slideToggle()
-})
-
-
 //привязать к скрипту с добавлением класса filled на бою как на форме auth / register
 //код тестовый для визуала
 const inviteItems = document.querySelectorAll('.invite__form_input')
