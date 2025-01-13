@@ -461,38 +461,40 @@ const materialSlider = new Swiper('.product-materials__slider', {
 })
 
 //video slider
-const videoSlider = new Swiper('.product-description__video_slider', {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    loop: false,
-    speed: 800,
-    navigation: {
-        nextEl: '.product-description__next',
-        prevEl: '.product-description__prev',
-    },
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-    },
-    breakpoints: {
-        300: {
-            slidesPerView: 1.2,
-            spaceBetween: 10,
+document.addEventListener('DOMContentLoaded', () => {
+    const videoSlider = new Swiper('.product-description__video_slider', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: false,
+        speed: 800,
+        navigation: {
+            nextEl: '.product-description__next',
+            prevEl: '.product-description__prev',
         },
-        576: {
-            slidesPerView: 2.5,
-            spaceBetween: 15,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
         },
-        768: {
-            spaceBetween: 30,
-            slidesPerView: 2.5,
+        breakpoints: {
+            300: {
+                slidesPerView: 1.2,
+                spaceBetween: 10,
+            },
+            576: {
+                slidesPerView: 2.5,
+                spaceBetween: 15,
+            },
+            768: {
+                spaceBetween: 30,
+                slidesPerView: 2.5,
+            },
+            1350: {
+                slidesPerView: 3,
+            }
         },
-        1350: {
-            slidesPerView: 3,
-        }
-    },
-})
+    });
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     const productDescriptionText = document.querySelector('.product-description__text');
