@@ -500,7 +500,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const productDescriptionText = document.querySelector('.product-description__text');
     const productDescriptionMore = document.querySelector('.product-description__text_more');
 
-    // Функция для определения макс. высоты для блока в зависимости от ширины экрана
     function getMaxHeight() {
         if (window.innerWidth > 576) {
             return 242;
@@ -509,7 +508,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Функция для обновления видимости кнопки "Показать больше"
     function updateButtonVisibility() {
         const maxHeight = getMaxHeight();
 
@@ -522,24 +520,37 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(productDescriptionText.scrollHeight)
     }
 
-
-
-    // Изначально проверим, нужно ли показывать кнопку
     updateButtonVisibility();
 
-    // Обработчик клика по кнопке
     productDescriptionMore.addEventListener('click', function () {
         if (productDescriptionText.classList.contains('uncropped')) {
-            // Если класс уже есть, удаляем его и меняем текст
             productDescriptionText.classList.remove('uncropped');
             productDescriptionMore.textContent = 'Показать больше';
         } else {
-            // Если класса нет, добавляем его и меняем текст
             productDescriptionText.classList.add('uncropped');
             productDescriptionMore.textContent = 'Скрыть';
         }
     });
 
-    // Отслеживание изменения размера окна и повторная проверка видимости кнопки
     window.addEventListener('resize', updateButtonVisibility);
 });
+
+//promo advantages slider
+document.addEventListener('DOMContentLoaded', () => {
+    const promoAdvantagesSlider = new Swiper('.promo-advantages__slider .swiper', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        loop: false,
+        speed: 800,
+        navigation: {
+            nextEl: '.promo-advantages__next',
+            prevEl: '.promo-advantages__prev',
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+    });
+});
+

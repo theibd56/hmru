@@ -27,7 +27,7 @@ body {
 }
 
 .container {
-  max-width: 1600px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -52,4 +52,35 @@ a {
 ul {
   list-style-type: none;
   padding: 0;
+}
+
+h1 {
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 80px; /* 114.286% */
+}
+
+h2 {
+  color: #2C3336;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+h3 {
+  color: #2C3336;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+h4 {
+  color: #FFF;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }

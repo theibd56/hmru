@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HMRU</title>
+  </head>
+  <body>
+
+  {{> _header}}
+
+      <main class="main promo-main">
+        <section class="promo-banner">
+          <div class="container">
+            <div class="promo-banner__content">
+              <h1 class="promo-banner__title">
+                Термоусадочная пленка <br>
+                ПОФ Hualian
+              </h1>
+              <a href="#" class="promo-banner__link">Купить</a>
+            </div>
+          </div>
+          <img src="/promo.png" alt="" class="promo-banner__bg">
+        </section>
+        <section class="promo-free">
+          <div class="container">
+            <div class="promo-free__content">
+              <div class="promo-free__title">
+                Заказать бесплатный образец
+              </div>
+              <form class="promo-free__form">
+                <div class="promo-free__fields">
+                  <input type="text" name="name" placeholder="Ваше имя" required>
+                  <input type="tel" name="phone" id="invitePhone" maxlength="17" placeholder="Номер телефона" required>
+                  <button>Оставить заявку</button>
+                </div>
+                <p class="promo-free__policy">
+                  Нажимая на кнопку, Вы даете согласие на <a href="#">обработку персональных данных</a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section class="promo-video">
+          <div class="container promo-video__container">
+            <div class="promo-video__content">
+              <a href="#" data-fancybox data-src="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" data-caption="RickAstley" class="promo-video__link">
+                <img src="/play.svg" alt="">
+              </a>
+              <img src="/promo-video.png" alt="" class="promo-video__bg">
+            </div>
+          </div>
+        </section>
+        <section class="promo-advantages">
+          <div class="container promo-advantages__container">
+            <div class="promo-advantages__heading">
+              <div class="promo-advantages__left">
+                <h2 class="promo-advantages__title">
+                  Основные преимущества
+                </h2>
+                <h3 class="promo-advantages__subtitle">
+                  ПОФ пленки Hualian
+                </h3>
+              </div>
+              <div class="promo-advantages__navigation">
+                <div class="promo-advantages__prev"></div>
+                <div class="promo-advantages__next"></div>
+              </div>
+            </div>
+            <div class="promo-advantages__slider">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide promo-advantages__slide">
+                    <div class="promo-advantages__slide_content">
+                      <h4 class="promo-advantages__slide_title">
+                        Extra эластичная и прочная
+                      </h4>
+                      <div class="promo-advantages__slide_descr">
+                        Обеспечивает надежную защиту упакованных товаров и гарантирует высокую прочность на разрыв
+                      </div>
+                    </div>
+                    <img src="/promo-slide-1.png" alt="" class="promo-advantages__slide_img">
+                    <div class="promo-advantages__circle promo-advantages__circle-1"></div>
+                    <div class="promo-advantages__circle promo-advantages__circle-2"></div>
+                    <div class="promo-advantages__circle promo-advantages__circle-3"></div>
+                  </div>
+                  <div class="swiper-slide promo-advantages__slide">
+                    <div class="promo-advantages__slide_content">
+                      <h4 class="promo-advantages__slide_title">
+                        Импортные высококлассные
+                        компоненты
+                      </h4>
+                      <div class="promo-advantages__slide_descr">
+                        Использование качественных материалов гарантирует долговечность и эффективность.
+                      </div>
+                    </div>
+                    <img src="/promo-slide-2.png" alt="" class="promo-advantages__slide_img">
+                    <div class="promo-advantages__circle promo-advantages__circle-1"></div>
+                    <div class="promo-advantages__circle promo-advantages__circle-2"></div>
+                    <div class="promo-advantages__circle promo-advantages__circle-3"></div>
+                  </div>
+                  <div class="swiper-slide promo-advantages__slide">
+                    <div class="promo-advantages__slide_content">
+                      <h4 class="promo-advantages__slide_title">
+                        Экологичная
+                        и безопасная
+                      </h4>
+                      <div class="promo-advantages__slide_descr">
+                        Пленка соответствует современным стандартам безопасности и экологии.
+                      </div>
+                    </div>
+                    <img src="/promo-slide-3.png" alt="" class="promo-advantages__slide_img">
+                    <div class="promo-advantages__circle promo-advantages__circle-1"></div>
+                    <div class="promo-advantages__circle promo-advantages__circle-2"></div>
+                    <div class="promo-advantages__circle promo-advantages__circle-3"></div>
+                  </div>
+                  <div class="swiper-slide promo-advantages__slide">
+                    <div class="promo-advantages__slide_content">
+                      <h4 class="promo-advantages__slide_title">
+                        Extra эластичная и прочная
+                      </h4>
+                      <div class="promo-advantages__slide_descr">
+                        Обеспечивает надежную защиту упакованных товаров и гарантирует высокую прочность на разрыв
+                      </div>
+                    </div>
+                    <img src="/promo-slide-1.png" alt="" class="promo-advantages__slide_img">
+                    <div class="promo-advantages__circle promo-advantages__circle-1"></div>
+                    <div class="promo-advantages__circle promo-advantages__circle-2"></div>
+                    <div class="promo-advantages__circle promo-advantages__circle-3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+  {{> _footer}}
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

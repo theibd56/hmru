@@ -1,0 +1,260 @@
+.promo {
+  &-main {
+    margin-top: -80px;
+  }
+  &-banner {
+    position: relative;
+
+    padding: 225px 0 325px;
+    &__title {
+      color: #FFF;
+    }
+    &__link {
+      color: #FFF;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%; /* 25.2px */
+
+      border-radius: 10px;
+      background: #0071E3;
+
+      padding: 17px 69px;
+
+      display: inline-block;
+
+      cursor: pointer;
+
+      transition: all .3s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 49px;
+
+      max-width: 673px;
+
+      position: relative;
+      z-index:5;
+    }
+    &__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &-free {
+    position: relative;
+    height: 220px;
+    .container {
+      position: absolute;
+      top: -50%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+    }
+
+    &__content {
+      padding: 50px;
+
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.07);
+      backdrop-filter: blur(15px);
+    }
+    &__form {
+      max-width: 880px;
+    }
+    &__title {
+      color: #2E2E2E;
+      font-size: 38px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%;
+
+      margin-bottom: 20px;
+    }
+    &__fields {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      margin-bottom: 20px;
+      input {
+        width: 100%;
+
+        color: #CDD1D2;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 140%; /* 25.2px */
+
+        padding: 17px 20px;
+
+        border-radius: 10px;
+        border: 1px solid #E7E7E7;
+        background: #FFF;
+        height: 60px;
+
+        outline: none;
+      }
+      button {
+        width: 100%;
+
+        color: #FFF;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%; /* 25.2px */
+
+        border-radius: 10px;
+        background: #0071E3;
+
+        height: 60px;
+        outline: none;
+        border: none;
+
+        display: inline-block;
+        cursor: pointer;
+        transition: all .3s ease;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+    &__policy {
+      color: #758289;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+
+      text-align: center;
+      a {
+        color: #0071E3;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        text-decoration-line: underline;
+
+        cursor: pointer;
+      }
+    }
+  }
+  &-video {
+    &__content {
+      position: relative;
+      height: 600px;
+    }
+    &__bg {
+      position: absolute;
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      border-radius: 20px;
+    }
+    &__link {
+      width: 200px;
+      height: 200px;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      z-index: 5;
+
+      cursor: pointer;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &-advantages {
+    margin-top: 80px;
+    &__heading {
+      margin-bottom: 40px;
+    }
+    &__slide {
+      min-height: 570px;
+
+      background: #0B0D0B;
+      border-radius: 30px;
+
+      padding: 30px;
+      position: relative;
+
+      overflow: hidden;
+      &_content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 6;
+
+        padding: 30px 30px 75px;
+
+        border-radius: 30px;
+        background: linear-gradient(185deg, #0B0D0B 64.78%, rgba(11, 13, 11, 0.00) 86%);
+      }
+      &_title {
+        margin-bottom: 14px;
+
+        position: relative;
+        z-index: 7;
+      }
+      &_descr {
+        color: #FFF;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+      }
+      &_img {
+        width: 100%;
+        height: 413px;
+
+        border-radius: 30px;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+    &__circle {
+      width: 132.766px;
+      height: 77px;
+      background: #0071E3;
+      filter: blur(65px);
+      transform: rotate(-45deg);
+
+      position: absolute;
+      z-index: 6;
+      &-1 {
+        left: -8px;
+        bottom: -62px;
+      }
+      &-2 {
+        right: -28px;
+        top: 149px;
+      }
+      &-3 {
+        left: -38px;
+        top: -64px;
+      }
+    }
+  }
+}
